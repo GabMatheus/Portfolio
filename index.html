@@ -5,22 +5,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio - Página Inicial</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
-    <h1>Portifólio</h1>
-    <h4>
-        <div class="author">
-            <span>Por Gabriel Matheus Oliveira</span>
-            <img src="img/foto.jpeg" alt="Gabriel Matheus" class="author-photo">
+    <!-- Cabeçalho com iniciais e menu -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="img/GM.png" alt="GM" class="author-logo">
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#projetos">Projetos</a></li>
+                    <li><a href="#tecnologias">Tecnologias</a></li>
+                </ul>
+            </nav>
+            <div class="language-selector">
+                <select id="language-select">
+                    <option value="pt">Português</option>
+                    <option value="en">English</option>
+                </select>
+            </div>
         </div>
-    </h4>
-    <div class="container">
-        <div class="box" id="sobre" onclick="location.href='sobre.html'">Sobre</div>
-        <div class="box" id="formacao" onclick="location.href='formacao.html'">Formação</div>
-        <div class="box" id="projetos" onclick="location.href='projetos.html'">Projetos</div>   
-        <div class="box" id="contato" onclick="location.href='contato.html'">Contato</div>
-        
-    </div>
+    </header>
+
+    <!-- Primeira seção - Início -->
+    <section class="section" id="inicio">
+        <div class="author-info">
+            <h2>Gabriel Matheus Oliveira</h2>
+            <p id="role">Desenvolvedor web <span id="dynamic-text"></span></p>
+            
+            <!-- Botão para download do CV -->
+            <a href="docs/curriculo_gabriel.pdf" class="download-btn" download>Download CV</a>
+        </div>
+        <img src="img/foto.png" alt="Gabriel Matheus" class="author-photo">
+        <div class="social-icons">
+            <a href="https://linkedin.com/in/oliveiragm" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/GabMatheus" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="mailto:gab_matheus@hotmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+        </div>
+    </section>
+
+    <!-- Segunda seção - Sobre -->
+    <section class="section" id="sobre">
+        <div class="sobre-container">
+            <h2>Sobre Mim</h2>
+            <div class="content-wrapper">
+                <div class="photo-background"> <!-- Fundo da foto -->
+                    <img src="img/foto_gab.png" alt="Gabriel Matheus" class="about-photo">
+                </div>
+                <div class="text-content">
+                    <div class="apresentacao-box">
+                        <h3>Apresentação<span class="neon-bar"></span></h3>
+                        <p>Me chamo Gabriel Matheus Oliveira, sou natural de Araxá no estado de Minas Gerais. Sou fascinado quando o assunto é tecnologia e adoro automatizar processos para facilitar o meu dia a dia tanto pessoal quanto profissionalmente falando...</p>
+                        <p>Atualmente, trabalho prestando serviço como Analista de Sistemas para uma empresa de contabilidade da cidade de São Gotardo também em Minas Gerais, onde realizo diversas atividades na área de tecnologia, como administrador de banco de dados (DBA), manutenção de hardwares, gerenciamento dos ERP's utilizados, rede estruturada, compras e vendas do setor de TI, segurança de dados, e suporte técnico aos colaboradores.</p>
+                        <p>Em meu tempo livre gosto de aproveitar meus hobbies, que incluem jogar video game, passear com minha namorada, assistir animes e treinar na academia principalmente. Me considero aventureiro, e estou sempre em busca de novos desafios para sair da minha zona de conforto.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Terceira seção - Projetos -->
+    <section class="section" id="projetos">
+        <h2>Meus Projetos</h2>
+        <div id="projetos-content">
+            <p>Carregando projetos...</p>
+        </div>
+    </section>
+
+    <!-- Quarta seção - Tecnologias -->
+    <section class="section" id="tecnologias">
+        <h2>Tecnologias que Uso</h2>
+        <p>Liste aqui as tecnologias, frameworks e ferramentas que você domina, como HTML, CSS, JavaScript, etc.</p>
+    </section>
+
+    <!-- Quinta seção - Contato -->
+    <section class="section" id="rodape">
+        <h2>Rodape</h2>
+        <p>Informações de contato e formas de se conectar com você.</p>
+    </section>
+
     <script src="script.js"></script>
 </body>
 </html>

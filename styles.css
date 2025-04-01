@@ -1,145 +1,413 @@
-body {
-    font-family: Arial, sans-serif;
+/* Estilo geral */
+body, html {
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start; 
-    height: 100vh;
+    height: 100%; 
+    scroll-behavior: smooth;
+    background-color: #040404; /* Fundo preto */
+    color: #ea5a45; /* Cor padrão do texto */
 }
 
-h1 {
-    margin-top: 20px; 
-    text-align: center;
-    font-size: 32px;
-}
-
-.container {
-    margin-top: 50px; 
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-}
-
-.box {
-    width: 150px;
-    height: 150px;
-    background-color: #4CAF50;
-    color: white;
+/* Estilizando cada seção */
+.section {
+    min-height: 100vh; /* Garante que a seção tenha pelo menos a altura da tela, mas pode crescer */
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    font-size: 20px;
-    border: 3px solid #333;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-    text-decoration: none;
-}
-
-.box:hover {
-    transform: scale(1.1);
-}
-
-.content {
-    margin-top: 30px;
-    width: 100%;
-    max-width: 500px; 
-    padding: 20px;
-    background-color: white;
-    border: 1px solid #ddd;
-    text-align: center;
-    position: relative; 
-    padding-bottom: 60px; /* Espaço na parte inferior para o botão de voltar */
-}
-
-/* Botão Voltar */
-.back-button {
-    position: relative; 
-    margin-top: 20px; 
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #333;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-    font-size: 16px;
-}
-
-.back-button:hover {
-    background-color: #555;
-}
-
-.back-button::before {
-    content: '←'; 
-    margin-right: 8px;
-    font-weight: bold;
-    font-size: 18px;
-}
-
-/* Formulário */
-form {
-    display: flex;
     flex-direction: column;
-    align-items: center; /* Centraliza o formulário */
-    margin-top: 20px;
-}
-
-label {
-    width: 80px; 
-    text-align: center;
-    margin-right: 10px;
-    font-weight: bold;
-}
-
-input[type="text"], input[type="email"], textarea {
-    width: 100%;
-    max-width: 350px; 
-    padding: 8px; 
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    padding: 20px;
     box-sizing: border-box;
-    margin-bottom: 10px; 
 }
 
-textarea {
-    height: 100px; /* Diminuir a altura da caixa de texto */
+/* Fundo preto para todas as seções */
+#inicio, #sobre, #projetos, #tecnologias, #rodape {
+    background-color: #040404; 
 }
 
-button[type="submit"] {
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-button[type="submit"]:hover {
-    background-color: #45a049;
-}
-
-/*minha foto e texto h4*/
+/* Estilo do autor e imagem */
 .author {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: flex-end;
+    width: 100%;
 }
 
 .author-photo {
-    width: 72px; 
-    height: 72px; 
-    border-radius: 50%; /* Para deixar a imagem circular */
-    margin-left: 15px; 
+    width: 380px;
+    border-radius: 50%;
+    margin-left: 200px;
+    margin-top: -150px;
+    margin-bottom: -10px;
 }
 
-h4 {
-    color: rgba(128, 128, 128, 0.7); 
-    font-size: 0.9em; 
-    margin-top: 2px; 
-    text-align: right; 
-    width: 30%; 
+.author-logo {
+    width: 180px;
+    border-radius: 100%;
+    margin-top: 10px;
+}
+
+/* Estilizando o cabeçalho e o menu */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #040404;
+    padding: 10px;
+    border-bottom: 0.75px solid #ea5a45;
+    z-index: 1000;
+}
+
+body {
+    padding-top: 60px;
+}
+
+.logo {
+    margin-right: 20px;
+    flex: 0 0 auto;
+}
+
+.nav-menu {
+    flex-grow: 1;
+    display: flex;
+    margin-left: 400px;
+    margin-top: -50px;
+}
+
+.nav-menu ul {
+    display: flex;
+    list-style: none;
+}
+
+.nav-menu ul li {
+    margin: 0 20px -10px;
+}
+
+.nav-menu ul li a {
+    text-decoration: none;
+    color: #ea5a45;
+    font-weight: 600;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.nav-menu ul li a:hover {
+    color: #602117;
+}
+
+/* Responsividade do menu */
+@media (max-width: 768px) {
+    .nav-menu ul {
+        flex-direction: column;
+    }
+
+    .nav-menu ul li {
+        margin: 10px 0;
+    }
+}
+
+/* Estilizando a seção de autor */
+.author-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 63%;
+}
+
+h2 {
+    font-size: 32px;
+    color: #ea5a45;
+    margin: 0;
+}
+
+#role {
+    font-size: 24px;
+    color: #ea5a45;
+}
+
+.download-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-size: 16px;
+    color: #f0a68e;
+    background-color: #602117;
+    border: 2px solid #ea5a45;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.download-btn:hover {
+    background-color: #ea5a45;
+    color: #040404;
+}
+
+.social-icons {
+    margin-top: 20px;
+    margin-right: 63%; 
+}
+
+.social-icons a {
+    color: #f0a68e;
+    margin: 0 15px;
+    font-size: 32px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #ea5a45;
+}
+
+/* Animação diagonal do canto superior direito */
+@keyframes comet-diagonal-animation {
+    0% {
+        transform: translate(1500px, -1000px);
+        opacity: 0;
+    }
+    70% {
+        transform: translate(-50px, 50px);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
+
+.author-photo.animate-comet {
+    animation: comet-diagonal-animation 3s ease-out forwards;
+}
+
+/* Estilo do seletor de idioma */
+.language-selector {
+    position: absolute;
+    margin-left: 1200px;
+    margin-top: -42px;
+    margin-bottom: -34px;
+}
+
+.language-selector select {
+    background-color: #040404;
+    color: #ea5a45;
+    border: 1px solid #ea5a45;
+    padding: 5px 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.language-selector select:hover {
+    background-color: #602117;
+}
+
+/* Seção Sobre */
+#sobre {
+    min-height: 100vh;
+    padding: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Alinha o conteúdo no topo */
+    align-items: flex-start;
+    position: relative; /* Garante que nada vaze */
+    overflow: hidden; /* Previne vazamentos */
+    margin-bottom: 50px; /* Espaço extra após a seção */
+}
+
+#sobre.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.sobre-container {
+    width: 100%;
+    height: auto; /* Ajusta automaticamente ao conteúdo */
+}
+
+#sobre h2 {
+    text-align: left;
+    margin-left: -75px;
+    margin-bottom: 90px;
+    position: relative;
+    padding-left: 10px;
+    font-size: 32px;
+    color: #ea5a45;
+}
+
+/* Linha sublinhada */
+#sobre h2::after {
+    content: '';
+    position: absolute;
+    left: 190px;
+    bottom: 18px;
+    width: 800px;
+    height: 1px;
+    background-color: #ea5a45;
+}
+
+.content-wrapper {
+    width: 100%;
+    gap: 40px; /* Substitui margens negativas */
+}
+
+.photo-background {
+    background-color: rgba(234, 90, 69, 0.8);
+    border-radius: 10px;
+    padding: 2px;
+    box-shadow: 0 0 15px rgba(234, 90, 69, 1), 0 0 25px rgba(234, 90, 69, 0.5);
+    margin-right: 30px;
+    flex-shrink: 0;
+}
+
+.about-photo {
+    width: 280px;
+    height: 340px;
+    border-radius: 10px;
+    margin: 0;
+}
+
+.apresentacao-box {
+    background-color: #040404;
+    border: 1px solid #ea5a45;
+    padding: 20px;
+    width: 800px;
+    color: #ea5a45;
+    font-size: 18px;
+    line-height: 1.6;
+    border-radius: 10px;
+    margin-top: 0;
+}
+
+.apresentacao-box h3 {
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+.neon-bar {
+    display: inline-block;
+    width: 2px;
+    height: 30px;
+    margin-left: 10px;
+    background-color: #ea5a45;
+    box-shadow: 0 0 10px #ea5a45, 0 0 20px #ea5a45, 0 0 30px #ea5a45;
+}
+
+.text-content p {
+    color: #ea5a45;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Responsividade para a seção sobre */
+@media (max-width: 768px) {
+    #sobre {
+        padding: 80px 20px;
+    }
+    
+    .content-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-photo {
+        margin-bottom: 20px;
+    }
+
+    .apresentacao-box {
+        width: 100%;
+        margin-left: 0;
+    }
+    
+    #sobre h2::after {
+        width: 200px;
+    }
+}
+
+/* Estilos para a seção Projetos */
+#projetos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 20px;
+    min-height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#projetos h2 {
+    font-size: 32px;
+    color: #ea5a45;
+    margin-bottom: 30px;
+    text-align: center;
+    width: 100%;
+}
+
+.projetos-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: justify;
+}
+
+.content p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    color: #ea5a45;
+    font-size: 18px;
+}
+
+.projeto-item {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #1a1a1a;
+    border: 1px solid #ea5a45;
+    border-radius: 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projeto-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(234, 90, 69, 0.5);
+}
+
+.projeto-item p {
+    margin: 0;
+    color: #ea5a45;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.content a {
+    color: #f0a68e;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.content a:hover {
+    color: #ea5a45;
+    text-decoration: underline;
+}
+
+/* Responsividade para a seção projetos */
+@media (max-width: 768px) {
+    #projetos {
+        padding: 60px 10px;
+    }
+
+    .content {
+        padding: 10px;
+    }
+
+    .projeto-item {
+        padding: 10px;
+    }
 }

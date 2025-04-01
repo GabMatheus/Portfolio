@@ -1,29 +1,99 @@
-const boxes = document.querySelectorAll('.box');
-const h4Element = document.querySelector('h4');
+// Script para efeito de digitação
+const dynamicText = document.getElementById("dynamic-text");
+const roles = ["Front-End", "Back-End"];
+let index = 0;
+let charIndex = 0;
+let currentRole = "";
+let currentText = "";
+let isDeleting = false;
 
-// Array de cores para o h4
-const colors = ['#FFA07A', '#FF8C00', '#FF4500', '#90EE90', '#32CD32', '#006400', '#FFD700', '#FF6347'];
+function type() {
+    if (isDeleting) {
+        currentText = roles[index].substring(0, charIndex - 1);
+        charIndex--;
+    } else {
+        currentText = roles[index].substring(0, charIndex + 1);
+        charIndex++;
+    }
+    dynamicText.innerHTML = currentText;
 
-// mudar a cor ao passar o mouse nas boxes
-function changeColorOnHover(event) {
-    event.target.style.backgroundColor = '#FF5733'; 
+    if (!isDeleting && charIndex === roles[index].length) {
+        setTimeout(() => {
+            isDeleting = true;
+        }, 1000); // Tempo que mantém o texto antes de começar a apagar
+    } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        index = (index + 1) % roles.length; // Muda para o próximo papel
+    }
+
+    const speed = isDeleting ? 50 : 150; // Velocidade de digitação e apagamento
+    setTimeout(type, speed);
 }
 
-// restaurar a cor original ao remover o mouse
-function resetColor(event) {
-    event.target.style.backgroundColor = '#4CAF50'; 
-}
+// Inicia o efeito de digitação após carregar a página
+document.addEventListener("DOMContentLoaded", type);
 
-// evento de passar o mouse em cima ou tirar pra mudar a cor da boxe
-boxes.forEach(box => {
-    box.addEventListener('mouseover', changeColorOnHover);
-    box.addEventListener('mouseout', resetColor);
+// Animação da foto ao carregar a página
+window.onload = function() {
+    const photo = document.querySelector('.author-photo');
+    photo.classList.add('animate-comet');
+};
+
+// Mudança de idioma
+document.getElementById('language-select').addEventListener('change', function() {
+    const selectedLanguage = this.value;
+    if (selectedLanguage === 'en') {
+        window.location.href = 'index_en.html'; // Carrega a versão em inglês
+    } else {
+        window.location.href = 'index.html'; // Carrega a versão em português
+    }
 });
 
-// Função para alternar a cor do h4 a cada 2seg
-let colorIndex = 0;
-function changeH4Color() {
-    h4Element.style.color = colors[colorIndex];
-    colorIndex = (colorIndex + 1) % colors.length; // Loop nas cores
+// Animação da seção "Sobre" ao rolar
+document.addEventListener("DOMContentLoaded", function() {
+    var sobreSection = document.getElementById("sobre");
+
+    function checkScroll() {
+        var sectionPosition = sobreSection.getBoundingClientRect().top;
+        var screenPosition = window.innerHeight / 1.3; // Ajuste para ativação da animação
+
+        if (sectionPosition < screenPosition) {
+            sobreSection.classList.add("visible");
+        }
+    }
+
+    window.addEventListener('scroll', checkScroll);
+});
+
+// Função para carregar o conteúdo de projetos.html
+function loadProjects() {
+    fetch('projetos.html')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Erro ao carregar projetos.html');
+            }
+            return response.text();
+        })
+        .then(data => {
+            document.getElementById('projetos-content').innerHTML = data;
+        })
+        .catch(error => {
+            console.error('Erro:', error);
+            document.getElementById('projetos-content').innerHTML = '<p>Erro ao carregar os projetos. Tente novamente mais tarde.</p>';
+        });
 }
-setInterval(changeH4Color, 1500);
+
+// Carregar projetos dinamicamente ao rolar até a seção
+document.addEventListener("DOMContentLoaded", function() {
+    const projetosSection = document.getElementById('projetos');
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                loadProjects();
+                observer.unobserve(projetosSection); // Carrega apenas uma vez
+            }
+        });
+    }, { threshold: 0.1 }); // Ativa quando 10% da seção estiver visível
+
+    observer.observe(projetosSection);
+});
