@@ -65,6 +65,40 @@ document.addEventListener("DOMContentLoaded", function() {
     window.addEventListener('scroll', checkScroll);
 });
 
+
+// Função para carregar o conteúdo de sobre.html
+function loadSobre() {
+    fetch('sobre.html')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Erro ao carregar sobre.html');
+            }
+            return response.text();
+        })
+        .then(data => {
+            document.getElementById('sobre-content').innerHTML = data;
+        })
+        .catch(error => {
+            console.error('Erro:', error);
+            document.getElementById('sobre-content').innerHTML = '<p>Erro ao carregar informações. Tente novamente mais tarde.</p>';
+        });
+}
+
+// Carregar "Sobre" dinamicamente ao rolar até a seção
+document.addEventListener("DOMContentLoaded", function() {
+    const sobreSection = document.getElementById('sobre');
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                loadSobre();
+                observer.unobserve(sobreSection); // Carrega apenas uma vez
+            }
+        });
+    }, { threshold: 0.1 }); // Ativa quando 10% da seção estiver visível
+
+    observer.observe(sobreSection);
+});
+
 // Função para carregar o conteúdo de projetos.html
 function loadProjects() {
     fetch('projetos.html')
