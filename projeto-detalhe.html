@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Projeto</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Seu cabeçalho/navegação aqui -->
+    
+    <div class="projeto-detalhe-container">
+        <button onclick="window.history.back()" class="btn-voltar">Voltar</button>
+        <div id="projeto-conteudo">
+            <!-- O conteúdo será carregado dinamicamente via JavaScript -->
+        </div>
+    </div>
+
+    <script>
+        // Dados dos projetos (pode ser movido para um arquivo .js separado)
+        const projetos = [
+            {
+                id: 1,
+                titulo: "Gerador de Códigos de Barras",
+                descricao: "Este projeto de automação foi desenvolvido para gerar códigos de barras para produtos. Ele surgiu da necessidade de resolver o problema de códigos ilegíveis ou de difícil acesso para os funcionários. O funcionamento é simples, o usuário digita os códigos e ao finalizar o programa cria no desktop um docx com todos os códigos para impressão.",
+                link: "https://github.com/GabMatheus/criar_cod_barras"
+            },
+            // Adicione os outros projetos aqui...
+        ];
+
+        // Carrega o projeto com base no ID na URL
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const projetoId = parseInt(urlParams.get('id'));
+            const projeto = projetos.find(p => p.id === projetoId);
+            
+            if (projeto) {
+                const conteudo = document.getElementById('projeto-conteudo');
+                conteudo.innerHTML = `
+                    <h2>${projeto.titulo}</h2>
+                    <p>${projeto.descricao}</p>
+                    <a href="${projeto.link}" target="_blank" class="link">Ver no GitHub</a>
+                `;
+            }
+        });
+    </script>
+</body>
+</html>

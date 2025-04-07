@@ -296,8 +296,7 @@ h2 {
     font-size: 18px;
     line-height: 1.6;
 }
-
-/* Seção Projetos */
+/* Seção Projetos - Versão Cards */
 #projetos {
     display: flex;
     flex-direction: column;
@@ -333,51 +332,110 @@ h2 {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
 }
 
-.content {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: justify;
-}
-
-.content p {
-    margin-bottom: 15px;
-    line-height: 1.6;
-    color: #ea5a45;
-    font-size: 18px;
-}
-
-.projeto-item {
-    margin-bottom: 20px;
-    padding: 15px;
+.projeto-card {
     background-color: #1a1a1a;
     border: 1px solid #ea5a45;
     border-radius: 5px;
+    padding: 20px;
+    cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 200px; /* Altura fixa para os cards */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
-.projeto-item:hover {
+.projeto-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 4px 8px rgba(234, 90, 69, 0.5);
 }
 
-.projeto-item p {
-    margin: 0;
+.projeto-card h3 {
     color: #ea5a45;
+    margin-top: 0;
+    margin-bottom: 10px;
     font-size: 18px;
-    line-height: 1.6;
 }
 
-.content a {
+.projeto-card p {
     color: #f0a68e;
+    font-size: 14px;
+    line-height: 1.4;
+    margin: 0;
+    flex-grow: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4; /* Limita a 4 linhas */
+    -webkit-box-orient: vertical;
+}
+
+.projeto-card .link {
+    color: #ea5a45;
+    font-size: 12px;
+    margin-top: 10px;
     text-decoration: none;
     font-weight: 600;
 }
 
-.content a:hover {
+.projeto-card .link:hover {
+    text-decoration: underline;
+}
+
+
+/* Estilos para a página de detalhes do projeto */
+.projeto-detalhe-container {
+    max-width: 800px;
+    margin: 100px auto;
+    padding: 20px;
+}
+
+.btn-voltar {
+    background-color: #1a1a1a;
     color: #ea5a45;
+    border: 1px solid #ea5a45;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+}
+
+.btn-voltar:hover {
+    background-color: #ea5a45;
+    color: #1a1a1a;
+}
+
+#projeto-conteudo {
+    background-color: #1a1a1a;
+    border: 1px solid #ea5a45;
+    border-radius: 5px;
+    padding: 30px;
+}
+
+#projeto-conteudo h2 {
+    color: #ea5a45;
+    margin-top: 0;
+}
+
+#projeto-conteudo p {
+    color: #f0a68e;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+#projeto-conteudo .link {
+    color: #ea5a45;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+#projeto-conteudo .link:hover {
     text-decoration: underline;
 }
 
