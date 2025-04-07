@@ -393,9 +393,13 @@ h2 {
     max-width: 800px;
     margin: 100px auto;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .btn-voltar {
+    align-self: flex-start; /* Coloca o botão à esquerda */
     background-color: #1a1a1a;
     color: #ea5a45;
     border: 1px solid #ea5a45;
@@ -416,6 +420,7 @@ h2 {
     border: 1px solid #ea5a45;
     border-radius: 5px;
     padding: 30px;
+    width: 100%;
 }
 
 #projeto-conteudo h2 {
@@ -438,6 +443,7 @@ h2 {
 #projeto-conteudo .link:hover {
     text-decoration: underline;
 }
+
 
 /* Seção Tecnologias */
 #tecnologias {
