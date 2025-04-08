@@ -27,7 +27,7 @@ const projetos = [
     {
         id: 3,
         titulo: "Distância entre cidades",
-        descricao: "Calcula a distância entre uma cidade para todas do Brasil fornecidas pela API do Google Maps Desenvolvido em python e testando a funcionalidade do ChatGPT para saber se é útil para ajudar desenvolvedores sem muita experiência com programas simples, o resultado foi um sucesso, ele trás uma boa base e informa corretamente muitas bibliotecas a serem usadas e como se dá sua utilização, melhor que perder horas e horas lendo toda a documentação das API's ou da linguagem em si, por exemplo, a tkinter eu não tinha conhecimento do funcionamento e ele ajudou bastante a entender o básico." ,
+        descricao: "Calcula a distância entre uma cidade a outra e de uma cidade para todas do Brasil que são fornecidas pela API do Google Maps. Desenvolvido em python e conta com uma interface simples criada pelo TKinter porém responsiva." ,
         imagens: [
             '<img src="img/dist cid.png" alt="Tela Inicial" >'
         ],
@@ -99,6 +99,35 @@ function type() {
     setTimeout(type, speed);
 }
 
+// Adicione esta função para o efeito de scroll
+function setupScrollReveal() {
+    const sections = document.querySelectorAll('section, .projeto, .header-content, footer');
+    
+    // Adiciona a classe 'reveal' a todos os elementos que devem ser animados
+    sections.forEach(section => {
+        section.classList.add('reveal');
+    });
+    
+    // Função para verificar se o elemento está na viewport
+    function checkScroll() {
+        sections.forEach(section => {
+            const sectionTop = section.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+            
+            // Quando a seção está a 80% da altura da janela
+            if (sectionTop < windowHeight * 0.8) {
+                section.classList.add('active');
+            }
+        });
+    }
+    
+    // Verifica na carga inicial
+    checkScroll();
+    
+    // Verifica durante o scroll
+    window.addEventListener('scroll', checkScroll);
+}
+
 // texto dentro de prjetos
 document.addEventListener("DOMContentLoaded", function () {
     const titulo = document.querySelector(".titulo-detalhe");
@@ -137,14 +166,17 @@ function loadProjectDetails() {
     }
 }
 
-// Event listeners
+// Event listener principal
 document.addEventListener("DOMContentLoaded", function() {
+    // Configura o efeito de revelação ao scroll
+    setupScrollReveal();
+
     // Efeito de digitação
     if (dynamicText) {
         type();
     }
 
-    // Animação da foto
+    // Animação da foto (agora tratada pelo scroll reveal)
     const photo = document.querySelector('.author-photo');
     if (photo) {
         photo.classList.add('animate-comet');
@@ -163,27 +195,12 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    // Animação da seção "Sobre"
-    var sobreSection = document.getElementById("sobre");
-    if (sobreSection) {
-        function checkScroll() {
-            var sectionPosition = sobreSection.getBoundingClientRect().top;
-            var screenPosition = window.innerHeight / 1.3;
-
-            if (sectionPosition < screenPosition) {
-                sobreSection.classList.add("visible");
-            }
-        }
-
-        window.addEventListener('scroll', checkScroll);
-    }
-
     // Carregar conteúdo dinâmico
     if (document.getElementById('projeto-conteudo')) {
         loadProjectDetails();
     }
 
-    // Observadores de interseção para carregamento lazy
+    // Observadores de interseção para carregamento lazy (mantido do seu código original)
     const sobreSectionLazy = document.getElementById('sobre');
     if (sobreSectionLazy) {
         const observerSobre = new IntersectionObserver((entries, observer) => {
@@ -213,7 +230,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
-// Funções de carregamento de conteúdo
+// Funções de carregamento de conteúdo (mantidas do seu código original)
 function loadSobre() {
     fetch('sobre.html')
         .then(response => {
@@ -224,6 +241,8 @@ function loadSobre() {
         })
         .then(data => {
             document.getElementById('sobre-content').innerHTML = data;
+            // Atualiza o efeito de scroll para os novos elementos
+            setTimeout(setupScrollReveal, 100);
         })
         .catch(error => {
             console.error('Erro:', error);
@@ -241,6 +260,8 @@ function loadProjects() {
         })
         .then(data => {
             document.getElementById('projetos-content').innerHTML = data;
+            // Atualiza o efeito de scroll para os novos elementos
+            setTimeout(setupScrollReveal, 100);
         })
         .catch(error => {
             console.error('Erro:', error);
