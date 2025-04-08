@@ -27,12 +27,20 @@ const projetos = [
         titulo: "Site Nutricional",
         descricao: "O projeto 'Nutrição Alimentar' é um site desenvolvido com o objetivo de promover a conscientização sobre a importância da alimentação saudável e oferecer ferramentas práticas para auxiliar os usuários em suas escolhas nutricionais. " +
                   "Ele foi produzido a partir de um projeto de atividade extensionista que a faculdade proporcionou e seu link de acesso é o: <a href='https://gabmatheus.github.io/Site_nutri/' target='_blank' class='link'>https://gabmatheus.github.io/Site_nutri/</a>",
+        imagens: [
+            '<img src="img/Site nutri - inicio.png" alt="Inicio do site" >',
+            '<img src="img/Site nutri - consulta.png" alt="Consulta Alimentos">'
+        ],
         link: "https://github.com/GabMatheus/Site_nutri"
     },
     {
         id: 5,
         titulo: "Soldiers vs Zombies",
-        descricao: "Soldiers vs Zombies é um jogo arcade 2D desenvolvido com Pygame. O jogo possui 2 fases, e cada fase termina com um evento de tempo esgotado. Pode ser jogado no modo cooperativo (2 jogadores). A pontuação é salva no banco de dados (SQLite3). " ,
+        descricao: "Soldiers vs Zombies é um jogo arcade 2D desenvolvido com Pygame. O jogo possui 2 fases, e cada fase termina com um evento de tempo esgotado. Pode ser jogado no modo cooperativo (2 jogadores). A pontuação é salva no banco de dados (SQLite3).",
+        imagens: [
+            '<img src="img/SvZ - menu.png" alt="Menu do jogo Soldiers vs Zombies" >',
+            '<img src="img/SvZ - fase.png" alt="Tela de jogo Soldiers vs Zombies">'
+        ],
         link: "https://github.com/GabMatheus/Soldiers_vs_zombies"
     },
     {
@@ -85,11 +93,23 @@ function loadProjectDetails() {
     if (projeto) {
         const conteudo = document.getElementById('projeto-conteudo');
         if (conteudo) {
-            conteudo.innerHTML = `
+            let html = `
                 <h2>${projeto.titulo}</h2>
                 <p>${projeto.descricao}</p>
-                <a href="${projeto.link}" target="_blank" class="link">Ver no GitHub</a>
             `;
+            
+            // Adiciona as imagens se existirem
+            if (projeto.imagens && projeto.imagens.length > 0) {
+                html += `<div class="projeto-imagens">`;
+                projeto.imagens.forEach(img => {
+                    html += img;
+                });
+                html += `</div>`;
+            }
+            
+            html += `<a href="${projeto.link}" target="_blank" class="link">Ver no GitHub</a>`;
+            
+            conteudo.innerHTML = html;
         }
     }
 }
