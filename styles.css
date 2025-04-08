@@ -237,7 +237,7 @@ h2 {
     position: absolute;
     left: 190px;
     bottom: 18px;
-    width: 800px;
+    width: 1087px;
     height: 1px;
     background-color: #ea5a45;
 }
@@ -339,9 +339,9 @@ h2 {
 #projetos h2::after {
     content: '';
     position: absolute;
-    left: 190px;
+    left: 235px;
     bottom: 18px;
-    width: 800px;
+    width: 1040px;
     height: 1px;
     background-color: #ea5a45;
 }
@@ -542,9 +542,9 @@ h2 {
 #tecnologias h2::after {
     content: '';
     position: absolute;
-    left: 190px;
+    left: 200px;
     bottom: 18px;
-    width: 800px;
+    width: 1076px;
     height: 1px;
     background-color: #ea5a45;
 }
