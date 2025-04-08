@@ -84,6 +84,14 @@ function type() {
     setTimeout(type, speed);
 }
 
+// texto dentro de prjetos
+document.addEventListener("DOMContentLoaded", function () {
+    const titulo = document.querySelector(".titulo-detalhe");
+    setTimeout(() => {
+        titulo.classList.add("mostrar");
+    }, 200); // pequeno delay pra dar o efeito
+});
+
 // Função para carregar os detalhes do projeto
 function loadProjectDetails() {
     const urlParams = new URLSearchParams(window.location.search);

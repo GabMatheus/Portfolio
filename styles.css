@@ -297,6 +297,23 @@ h2 {
     line-height: 1.6;
 }
 
+.titulo-detalhe {
+    font-family: 'Bebas Neue', sans-serif;
+    text-align: center;
+    font-size: 3rem;
+    color: #ea5a45;
+    margin-top: 30px;
+    letter-spacing: 2px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.titulo-detalhe.mostrar {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* Seção Projetos - Versão Cards */
 #projetos {
     display: flex;
