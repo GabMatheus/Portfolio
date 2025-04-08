@@ -104,7 +104,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const titulo = document.querySelector(".titulo-detalhe");
     setTimeout(() => {
         titulo.classList.add("mostrar");
-    }, 200); // pequeno delay pra dar o efeito
+    }, 120); // pequeno delay pra dar o efeito
 });
 
 // Função para carregar os detalhes do projeto

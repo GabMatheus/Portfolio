@@ -389,7 +389,6 @@ h2 {
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
 }
 
@@ -553,11 +552,11 @@ h2 {
 #rodape {
     padding: 20px;
     text-align: center;
-    background-color: #040404;
-    color: #ea5a45;
+    background-color: #ea5a45;
+    color: #040404;
     font-size: 14px;
     width: 100%;
-    border-top: 0.75px solid #ea5a45; 
+    border-top: 0.75px solid #040404; 
 }
 
 /* Media Queries */
