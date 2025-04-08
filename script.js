@@ -67,6 +67,7 @@ const projetos = [
 
 ];
 
+
 // Script para efeito de digitação
 const dynamicText = document.getElementById("dynamic-text");
 const roles = ["Front-End", "Back-End"];

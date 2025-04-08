@@ -286,12 +286,32 @@ h2 {
     line-height: 1.6;
     border-radius: 10px;
     margin: 0;
+    transition: box-shadow 0.5s ease;
+    animation: border-pulse 4s infinite alternate;
 }
 
 .apresentacao-box h3 {
     display: flex;
     align-items: center;
     margin: 0;
+}
+
+@keyframes border-pulse {
+    0% {
+        box-shadow: 0 0 5px rgba(234, 90, 69, 0.3);
+    }
+    100% {
+        box-shadow: 0 0 15px rgba(234, 90, 69, 0.8), 
+                   0 0 25px rgba(234, 90, 69, 0.3);
+    }
+}
+
+.apresentacao-box:hover {
+    animation: none;
+    box-shadow: 0 0 20px rgba(234, 90, 69, 0.8), 
+                0 0 30px rgba(234, 90, 69, 0.5);
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
 }
 
 .neon-bar {
