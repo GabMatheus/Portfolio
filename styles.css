@@ -296,6 +296,7 @@ h2 {
     font-size: 18px;
     line-height: 1.6;
 }
+
 /* Seção Projetos - Versão Cards */
 #projetos {
     display: flex;
@@ -371,7 +372,7 @@ h2 {
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 4; /* Limita a 4 linhas */
+    -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
 }
 
@@ -387,7 +388,6 @@ h2 {
     text-decoration: underline;
 }
 
-
 /* Estilos para a página de detalhes do projeto */
 .projeto-detalhe-container {
     max-width: 800px;
@@ -399,7 +399,7 @@ h2 {
 }
 
 .btn-voltar {
-    align-self: flex-start; /* Coloca o botão à esquerda */
+    align-self: flex-start; 
     background-color: #1a1a1a;
     color: #ea5a45;
     border: 1px solid #ea5a45;
@@ -533,7 +533,6 @@ h2 {
 }
 
 /* Rodapé */
-
 #rodape {
     padding: 20px;
     text-align: center;
