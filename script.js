@@ -4,6 +4,10 @@ const projetos = [
         id: 1,
         titulo: "Gerador de Códigos de Barras",
         descricao: "Este projeto de automação foi desenvolvido para gerar códigos de barras para produtos. Ele surgiu da necessidade de resolver o problema de códigos ilegíveis ou de difícil acesso para os funcionários. O funcionamento é simples, o usuário digita os códigos e ao finalizar o programa cria no desktop um docx com todos os códigos para impressão.",
+        imagens: [
+            '<img src="img/Ger_cod_128.png" alt="Tela para digitar os códigos e salvá-los" >',
+            '<img src="img/Ger_cod_128_doc.png" alt="Documento docx gerado">'
+        ], 
         link: "https://github.com/GabMatheus/criar_cod_barras"
     },
     {
@@ -14,12 +18,19 @@ const projetos = [
                    "realizar 3 consultas, aguardar o tempo necessário e então fazer mais três consultas até o último CNPJ do arquivo. " +
                    "Ao final, são retornados dados como nome da empresa, cidade, estado e outras informações. " +
                    "A API é pública e permite selecionar diferentes informações conforme a necessidade.",
+        imagens: [
+            '<img src="img/Consulta_cnpj2.png" alt="Programa de consultar cnpj na receita" >',
+            '<img src="img/Consulta_cnpj.png" alt="Programa executando">'
+        ],    
         link: "https://github.com/GabMatheus/consultaCNPJ"
     },
     {
         id: 3,
         titulo: "Distância entre cidades",
         descricao: "Calcula a distância entre uma cidade para todas do Brasil fornecidas pela API do Google Maps Desenvolvido em python e testando a funcionalidade do ChatGPT para saber se é útil para ajudar desenvolvedores sem muita experiência com programas simples, o resultado foi um sucesso, ele trás uma boa base e informa corretamente muitas bibliotecas a serem usadas e como se dá sua utilização, melhor que perder horas e horas lendo toda a documentação das API's ou da linguagem em si, por exemplo, a tkinter eu não tinha conhecimento do funcionamento e ele ajudou bastante a entender o básico." ,
+        imagens: [
+            '<img src="img/dist cid.png" alt="Tela Inicial" >'
+        ],
         link: "https://github.com/GabMatheus/Distancia_cidades"
     },
     {
@@ -47,6 +58,10 @@ const projetos = [
         id: 6,
         titulo: "Consulta produtos/cartões",
         descricao: "Este projeto é uma aplicação desktop que permite a consulta de informações sobre produtos e cartões em aberto para a empresa onde trabalho. Desenvolvida utilizando Electron no frontend e Flask no backend, a aplicação acessa dados armazenados em um banco de dados PostgreSQL. A interface gráfica foi construída com HTML, CSS e JavaScript." ,
+        imagens: [
+            '<img src="img/Cons_prod_inicial.png" alt="Tela inicia do programa" >',
+            '<img src="img/Cons_prod.png" alt="Exemplo ao executar um comando">'
+        ],
         link: "https://github.com/GabMatheus/app_flask_electron"
     },
 
