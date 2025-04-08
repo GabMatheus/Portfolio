@@ -67,7 +67,6 @@ const projetos = [
 
 ];
 
-
 // Script para efeito de digitação
 const dynamicText = document.getElementById("dynamic-text");
 const roles = ["Front-End", "Back-End"];
@@ -134,7 +133,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const titulo = document.querySelector(".titulo-detalhe");
     setTimeout(() => {
         titulo.classList.add("mostrar");
-    }, 120); // pequeno delay pra dar o efeito
+    }, 100); // pequeno delay pra dar o efeito
 });
 
 // Função para carregar os detalhes do projeto
@@ -166,6 +165,39 @@ function loadProjectDetails() {
         }
     }
 }
+
+// Carrega as tecnologias do arquivo JSON
+async function loadTecnologias() {
+    try {
+        // Se estiver usando formacao.html como fonte:
+        // const response = await fetch('formacao.html');
+        // Ou se preferir um arquivo separado:
+        const response = await fetch('tecnologias.json');
+        const data = await response.json();
+        displayTecnologias(data.tecnologias);
+    } catch (error) {
+        console.error('Erro ao carregar tecnologias:', error);
+        document.getElementById('tecnologias-content').innerHTML = 
+            '<p>Erro ao carregar tecnologias. Por favor, tente novamente mais tarde.</p>';
+    }
+}
+
+// Exibe as tecnologias na página
+function displayTecnologias(tecnologias) {
+    const container = document.getElementById('tecnologias-content');
+    
+    container.innerHTML = tecnologias.map(tech => `
+        <div class="tech-item">
+            <img src="${tech.icone}" alt="${tech.nome}" class="tech-icon" 
+                 onerror="this.src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/file/file-original.svg'">
+            <h3 class="tech-name">${tech.nome}</h3>
+            <p class="tech-desc">${tech.descricao}</p>
+        </div>
+    `).join('');
+}
+
+// Carrega quando a página estiver pronta
+document.addEventListener('DOMContentLoaded', loadTecnologias);
 
 // Event listener principal
 document.addEventListener("DOMContentLoaded", function() {

@@ -1,0 +1,54 @@
+{
+    "tecnologias": [
+      {
+        "nome": "C e C++",
+        "descricao": "Desenvolvimento e programação de sistemas embarcados",
+        "icone": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg"
+      },
+      {
+        "nome": "Python",
+        "descricao": "Automatização de rotinas, desenvolvimento de apps e jogos",
+        "icone": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+      },
+      {
+        "nome": "SQL (PostgreSQL, MySQL, SQL Server)",
+        "descricao": "Administração de bancos de dados relacionais",
+        "icone": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+      },
+      {
+        "nome": "HTML5",
+        "descricao": "Estruturação de páginas web",
+        "icone": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+      },
+      {
+        "nome": "CSS3",
+        "descricao": "Estilização de páginas web",
+        "icone": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+      },
+      {
+        "nome": "JavaScript",
+        "descricao": "Experiência em JavaScript moderno (ES6+)",
+        "icone": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+      },
+      {
+        "nome": "React",
+        "descricao": "Framework para aplicações Front End",
+        "icone": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+      },
+      {
+        "nome": "LaTeX",
+        "descricao": "Construção de documentos técnicos",
+        "icone": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/latex/latex-original.svg"
+      },
+      {
+        "nome": "Microsoft Excel",
+        "descricao": "Planilhas avançadas, macros e análise de dados",
+        "icone": "https://upload.wikimedia.org/wikipedia/commons/3/34/Microsoft_Office_Excel_%282019–present%29.svg"
+      },
+      {
+        "nome": "Java",
+        "descricao": "Desenvolvimento de aplicações orientada a objetos",
+        "icone": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
+      }
+    ]
+  }
