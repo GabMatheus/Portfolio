@@ -1,0 +1,76 @@
+{
+    "projetos": [
+      {
+        "id": 1,
+        "titulo": "Gerador de Códigos de Barras",
+        "descricaoResumida": "Projeto de automação para gerar códigos de barras para produtos. Cria um docx com todos os códigos para impressão.",
+        "descricaoCompleta": "Este projeto de automação foi desenvolvido para gerar códigos de barras para produtos. Ele surgiu da necessidade de resolver o problema de códigos ilegíveis ou de difícil acesso para os funcionários. O funcionamento é simples, o usuário digita os códigos e ao finalizar o programa cria no desktop um docx com todos os códigos para impressão.",
+        "imagens": [
+          "img/Ger_cod_128.png",
+          "img/Ger_cod_128_doc.png"
+        ],
+        "link": "https://github.com/GabMatheus/criar_cod_barras",
+        "tecnologias": ["Python"]
+      },
+      {
+        "id": 2,
+        "titulo": "Consulta de CNPJ",
+        "descricaoResumida": "Consulta CNPJs com a API da Receita Federal e retorna dados úteis para o setor de contabilidade.",
+        "descricaoCompleta": "Código feito em Python que realiza uma consulta na API da Receita Federal brasileira para obter dados de empresas. Como a API libera apenas 3 consultas de CNPJs por minuto gratuitamente, implementei um timer que faz o programa realizar 3 consultas, aguardar o tempo necessário e então fazer mais três consultas até o último CNPJ do arquivo. Ao final, são retornados dados como nome da empresa, cidade, estado e outras informações. A API é pública e permite selecionar diferentes informações conforme a necessidade.",
+        "imagens": [
+          "img/Consulta_cnpj2.png",
+          "img/Consulta_cnpj.png"
+        ],
+        "link": "https://github.com/GabMatheus/consultaCNPJ",
+        "tecnologias": ["Python", "Requests", "API REST"]
+      },
+      {
+        "id": 3,
+        "titulo": "Distância entre Cidades",
+        "descricaoResumida": "Consulta a API do Google Maps para calcular a distância entre cidades no Brasil.",
+        "descricaoCompleta": "Calcula a distância entre uma cidade a outra e de uma cidade para todas do Brasil que são fornecidas pela API do Google Maps. Desenvolvido em python e conta com uma interface simples criada pelo TKinter porém responsiva.",
+        "imagens": [
+          "img/dist cid.png"
+        ],
+        "link": "https://github.com/GabMatheus/Distancia_cidades",
+        "tecnologias": ["Python", "Google Maps API"]
+      },
+      {
+        "id": 4,
+        "titulo": "Site Nutricional",
+        "descricaoResumida": "Site com informações sobre alimentos, calculadora de macronutrientes e contato de nutricionista.",
+        "descricaoCompleta": "O projeto 'Nutrição Alimentar' é um site desenvolvido com o objetivo de promover a conscientização sobre a importância da alimentação saudável e oferecer ferramentas práticas para auxiliar os usuários em suas escolhas nutricionais. Ele foi produzido a partir de um projeto de atividade extensionista que a faculdade proporcionou.",
+        "imagens": [
+          "img/Site nutri - inicio.png",
+          "img/Site nutri - consulta.png"
+        ],
+        "link": "https://github.com/GabMatheus/Site_nutri",
+        "site": "https://gabmatheus.github.io/Site_nutri/",
+        "tecnologias": ["HTML", "CSS", "JavaScript"]
+      },
+      {
+        "id": 5,
+        "titulo": "Soldiers vs Zombies",
+        "descricaoResumida": "Jogo arcade 2D desenvolvido em Python usando Pygame com scores salvos em SQLite3.",
+        "descricaoCompleta": "Soldiers vs Zombies é um jogo arcade 2D desenvolvido com Pygame. O jogo possui 2 fases, e cada fase termina com um evento de tempo esgotado. Pode ser jogado no modo cooperativo (2 jogadores). A pontuação é salva no banco de dados (SQLite3).",
+        "imagens": [
+          "img/SvZ - menu.png",
+          "img/SvZ - fase.png"
+        ],
+        "link": "https://github.com/GabMatheus/Soldiers_vs_zombies",
+        "tecnologias": ["Python", "Pygame", "SQLite3"]
+      },
+      {
+        "id": 6,
+        "titulo": "Consultar Produtos/Cartões",
+        "descricaoResumida": "Aplicação desktop para consulta de informações sobre produtos e cartões em aberto.",
+        "descricaoCompleta": "Este projeto é uma aplicação desktop que permite a consulta de informações sobre produtos e cartões em aberto para a empresa onde trabalho. Desenvolvida utilizando Electron no frontend e Flask no backend, a aplicação acessa dados armazenados em um banco de dados PostgreSQL. A interface gráfica foi construída com HTML, CSS e JavaScript.",
+        "imagens": [
+          "img/Cons_prod_inicial.png",
+          "img/Cons_prod.png"
+        ],
+        "link": "https://github.com/GabMatheus/app_flask_electron",
+        "tecnologias": ["Electron", "Flask", "PostgreSQL", "HTML/CSS/JS"]
+      }
+    ]
+  }
