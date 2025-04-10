@@ -49,6 +49,16 @@
         "nome": "Java",
         "descricao": "Desenvolvimento de aplicações orientada a objetos",
         "icone": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
+      },
+      {
+        "nome": "Scrum",
+        "descricao": "Framework ágil para gestão de projetos complexos",
+        "icone": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jira/jira-original.svg"
+      },
+      {
+        "nome": "Git/GitHub",
+        "descricao": "Controle de versão e plataforma de colaboração para desenvolvimento de software",
+        "icone": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
       }
     ]
   }
