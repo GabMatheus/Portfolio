@@ -255,9 +255,9 @@ h2 {
 #sobre h2::after {
     content: '';
     position: absolute;
-    left: 190px;
-    bottom: 18px;
-    width: 1087px;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
     height: 1px;
     background-color: #d1cfcd;
 }
@@ -460,9 +460,9 @@ h2 {
 #projetos h2::after {
     content: '';
     position: absolute;
-    left: 235px;
-    bottom: 18px;
-    width: 1040px;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
     height: 1px;
     background-color: #d1cfcd;
 }
@@ -647,9 +647,9 @@ h2 {
 #tecnologias h2::after {
     content: '';
     position: absolute;
-    left: 200px;
-    bottom: 18px;
-    width: 1076px;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
     height: 1px;
     background-color: #d1cfcd;
 }
