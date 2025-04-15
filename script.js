@@ -223,7 +223,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const photo = document.querySelector('.author-photo');
   if (photo) photo.classList.add('animate-comet');
   
-  // Mudança de idioma
+  // Mudança de idioma que vou arrumar depois
   const languageSelect = document.getElementById('language-select');
   if (languageSelect) {
     languageSelect.addEventListener('change', function() {
