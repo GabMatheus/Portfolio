@@ -33,7 +33,7 @@ header {
     right: 0;
     background-color: #e8e6e4; /* Tom mais claro que o fundo */
     padding: 10px;
-    border-bottom: 1px solid #d1cfcd; /* Borda mais visível */
+    border-bottom: 2px solid #d1cfcd; /* Borda mais visível */
     z-index: 1000;
     box-shadow: 0 2px 4px rgba(0,0,0,0.08); /* Sombra mais pronunciada */
 }
@@ -44,14 +44,15 @@ body {
 
 .logo {
     margin-right: 20px;
+    margin-top: -15px;
     flex: 0 0 auto;
 }
 
 .nav-menu {
     flex-grow: 1;
     display: flex;
-    margin-left: 400px;
-    margin-top: -10px;
+    margin-left: 480px;
+    margin-top: -20px;
 }
 
 .nav-menu ul {
@@ -123,7 +124,7 @@ body {
 }
 
 .author-photo {
-    width: 380px;
+    width: 290px;
     border-radius: 50%;
     margin-left: 200px;
     margin-top: -150px;
@@ -278,8 +279,8 @@ h2 {
 
 .about-photo {
     width: 280px;
-    height: 340px;
-    border-radius: 10px;
+    height: 390px;
+    border-radius: 7px;
     margin: 0;
 }
 
