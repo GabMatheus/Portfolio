@@ -627,8 +627,8 @@ h2 {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    padding: 100px 150px; /* Reduzi o padding vertical */
-    min-height: auto; /* Mudei de 100vh para auto */
+    padding: 100px 150px;
+    min-height: auto; 
     width: 100%;
     margin-bottom: 50px;
     background-color: #f5f4f3;
@@ -637,7 +637,7 @@ h2 {
 #tecnologias h2 {
     text-align: left;
     margin-left: -75px;
-    margin-bottom: 50px; /* Reduzi a margem inferior */
+    margin-bottom: 50px; 
     position: relative;
     padding-left: 10px;
     font-size: 32px;
@@ -657,46 +657,46 @@ h2 {
 /* Estilo para o grid de tecnologias */
 .tech-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Reduzi de 250px para 200px */
-    gap: 20px; /* Reduzi o gap de 30px para 20px */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+    gap: 20px; 
     width: 100%;
 }
 
 .tech-item {
     background-color: #e8e6e4;
     border: 1px solid #d1cfcd;
-    border-radius: 8px; /* Reduzi o border-radius */
-    padding: 15px; /* Reduzi o padding de 25px para 15px */
+    border-radius: 8px; 
+    padding: 15px; 
     transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08); /* Reduzi a sombra */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08); 
 }
 
 .tech-item:hover {
-    transform: translateY(-3px); /* Reduzi o efeito hover */
-    box-shadow: 0 4px 12px rgba(0,0,0,0.12); /* Sombra mais sutil */
+    transform: translateY(-3px); 
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12); 
 }
 
 .tech-icon {
-    width: 40px; /* Reduzi de 60px para 40px */
-    height: 40px; /* Reduzi de 60px para 40px */
-    margin-bottom: 10px; /* Reduzi a margem inferior */
+    width: 40px; 
+    height: 40px; 
+    margin-bottom: 10px; 
 }
 
 .tech-name {
     color: #3a3a3a;
-    font-size: 16px; /* Reduzi de 18px para 16px */
+    font-size: 16px; 
     font-weight: 600;
-    margin-bottom: 8px; /* Reduzi a margem inferior */
+    margin-bottom: 8px; 
 }
 
 .tech-desc {
     color: #7a7a7a;
-    font-size: 13px; /* Reduzi de 14px para 13px */
-    line-height: 1.5; /* Ajustei o line-height */
+    font-size: 13px; 
+    line-height: 1.5; 
 }
 /* Rodapé */
 #rodape {
