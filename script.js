@@ -211,6 +211,16 @@ const displayTecnologias = (tecnologias) => {
 };
 
 // =============================================
+// MENU HAMBÚRGUER RESPONSIVO
+// =============================================
+function toggleMenu() {
+  const menu = document.getElementById("mobileMenu");
+  if (menu) {
+    menu.classList.toggle("show");
+  }
+}
+
+// =============================================
 // INICIALIZAÇÃO DA PÁGINA
 // =============================================
 

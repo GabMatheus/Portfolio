@@ -11,25 +11,31 @@
     <!-- Cabeçalho com iniciais e menu -->
     <header>
         <div class="header-container">
-            <div class="logo">
-                <img src="img/GM.png" alt="GM" class="author-logo">
-            </div>
-            <nav class="nav-menu">
-                <ul>
-                    <li><a href="#inicio">Início</a></li>
-                    <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="#projetos">Projetos</a></li>
-                    <li><a href="#tecnologias">Tecnologias</a></li>
-                </ul>
-            </nav>
-            <div class="language-selector">
-                <select id="language-select">
-                    <option value="pt">Português</option>
-                    <option value="en">English</option> <!--Falta arrumar para ingles-->
-                </select>
-            </div>
+          <div class="logo">
+            <img src="img/GM.png" alt="GM" class="author-logo">
+          </div>
+      
+          <!-- Botão hambúrguer -->
+          <div class="hamburger" onclick="toggleMenu()">☰</div>
+      
+          <nav class="nav-menu" id="mobileMenu">
+            <ul>
+              <li><a href="#inicio">Início</a></li>
+              <li><a href="#sobre">Sobre</a></li>
+              <li><a href="#projetos">Projetos</a></li>
+              <li><a href="#tecnologias">Tecnologias</a></li>
+            </ul>
+          </nav>
+      
+          <div class="language-selector">
+            <select id="language-select">
+              <option value="pt">Português</option>
+              <option value="en">English</option>
+            </select>
+          </div>
         </div>
-    </header>
+      </header>
+      
 
     <!-- Primeira seção - Início -->
     <section class="section reveal" id="inicio">
