@@ -9,8 +9,8 @@ body, html {
     font-family: 'Inter', sans-serif;
     height: 100%;
     scroll-behavior: smooth;
-    background-color: #f5f4f3; /* Fundo mais suave */
-    color: #3a3a3a; /* Texto mais suave que preto puro */
+    background-color: #f5f4f3;
+    color: #3a3a3a;
     padding-top: 80px;
 }
 
@@ -31,15 +31,15 @@ header {
     top: 0;
     left: 0;
     right: 0;
-    background-color: #e8e6e4; /* Tom mais claro que o fundo */
+    background-color: #e8e6e4;
     padding: 10px;
-    border-bottom: 2px solid #d1cfcd; /* Borda mais visível */
+    border-bottom: 2px solid #d1cfcd;
     z-index: 1000;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.08); /* Sombra mais pronunciada */
-}
-
-body {
-    padding-top: 60px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .logo {
@@ -66,25 +66,14 @@ body {
 
 .nav-menu ul li a {
     text-decoration: none;
-    color: #5a5a5a; /* Cinza mais escuro */
+    color: #5a5a5a;
     font-weight: 500;
     font-size: 16px;
     transition: color 0.3s ease;
 }
 
 .nav-menu ul li a:hover {
-    color: #2c2c2c; /* Quase preto ao passar o mouse */
-}
-
-/* Responsividade do menu */
-@media (max-width: 768px) {
-    .nav-menu ul {
-        flex-direction: column;
-    }
-
-    .nav-menu ul li {
-        margin: 10px 0;
-    }
+    color: #2c2c2c;
 }
 
 .language-selector {
@@ -114,6 +103,7 @@ body {
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    padding: 0 20px;
 }
 
 .author-info {
@@ -158,7 +148,7 @@ h2 {
     margin-top: 20px;
     font-size: 16px;
     color: #ffffff;
-    background-color: #8a8886; /* Tom médio */
+    background-color: #8a8886;
     border: none;
     border-radius: 5px;
     text-decoration: none;
@@ -167,13 +157,14 @@ h2 {
 }
 
 .download-btn:hover {
-    background-color: #6a6866; /* Tom mais escuro */
+    background-color: #6a6866;
     color: #ffffff;
 }
 
 .social-icons {
     margin-top: 20px;
     margin-right: 63%;
+    display: flex;
 }
 
 .social-icons a {
@@ -230,11 +221,6 @@ h2 {
     position: relative;
     overflow: hidden;
     margin-bottom: 50px;
-}
-
-#sobre.visible {
-    opacity: 1;
-    transform: translateY(0);
 }
 
 .sobre-container {
@@ -589,38 +575,7 @@ h2 {
     transform: scale(1.02);
     box-shadow: 0 8px 24px rgba(0,0,0,0.12);
 }
-  
-@media (max-width: 768px) {
-    #projetos {
-      padding: 100px 20px;
-    }
-    
-    #projetos h2 {
-      margin-left: 0;
-      font-size: 28px;
-    }
-    
-    #projetos h2::after {
-      display: none;
-    }
-    
-    .projeto-img {
-      width: 100%;
-      height: auto;
-      max-height: 400px;
-    }
-    
-    .project-actions {
-      flex-direction: column;
-      gap: 10px;
-    }
-    
-    .button {
-      width: 100%;
-      justify-content: center;
-    }
-}
-  
+
 /* Seção Tecnologias */
 #tecnologias {
     display: flex;
@@ -698,6 +653,7 @@ h2 {
     font-size: 13px; 
     line-height: 1.5; 
 }
+
 /* Rodapé */
 #rodape {
     padding: 20px;
@@ -728,68 +684,188 @@ footer {
     transform: translateY(0);
 }
 
-/* Media Queries */
+/* ============================================ */
+/* MEDIA QUERIES PARA DISPOSITIVOS MÓVEIS */
+/* ============================================ */
+
 @media (max-width: 768px) {
+    /* Ajustes gerais */
+    body {
+        padding-top: 80px;
+    }
+    
     /* Menu */
+    header {
+        flex-direction: column;
+        padding: 15px;
+    }
+    
+    .logo {
+        margin: 0 auto 15px;
+        display: block;
+    }
+    
+    .nav-menu {
+        margin: 0;
+        width: 100%;
+        justify-content: center;
+    }
+    
     .nav-menu ul {
         flex-direction: column;
+        align-items: center;
+        width: 100%;
     }
-
+    
     .nav-menu ul li {
-        margin: 10px 0;
+        margin: 5px 0;
     }
-
+    
+    .language-selector {
+        position: static;
+        margin: 15px auto 0;
+        display: block;
+        text-align: center;
+    }
+    
+    /* Home - Autor */
+    .author {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+    
+    .author-info {
+        margin-right: 0;
+        align-items: center;
+    }
+    
+    .author-photo {
+        margin: 30px auto;
+        width: 200px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+    }
+    
+    .social-icons {
+        margin-right: 0;
+        justify-content: center;
+    }
+    
     /* Sobre */
     #sobre {
         padding: 80px 20px;
     }
     
-    .content-wrapper {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .about-photo {
-        margin-bottom: 20px;
-    }
-
-    .apresentacao-box {
-        width: 100%;
+    #sobre h2 {
+        margin-left: 0;
+        text-align: center;
+        margin-bottom: 40px;
     }
     
     #sobre h2::after {
-        width: 200px;
+        width: 100%;
+        left: 0;
     }
-
+    
+    .content-wrapper {
+        flex-direction: column;
+    }
+    
+    .photo-background {
+        margin: 0 auto;
+    }
+    
+    .about-photo {
+        width: 100%;
+        max-width: 280px;
+        height: auto;
+    }
+    
+    .apresentacao-box {
+        width: 100%;
+        margin-top: 30px;
+    }
+    
     /* Projetos */
     #projetos {
         padding: 80px 20px;
     }
-
+    
+    #projetos h2 {
+        margin-left: 0;
+        text-align: center;
+    }
+    
     #projetos h2::after {
-        width: 200px;
+        width: 100%;
+        left: 0;
     }
-
-    .content {
-        padding: 10px;
+    
+    .projetos-container {
+        grid-template-columns: 1fr;
     }
-
-    .projeto-item {
-        padding: 10px;
+    
+    .projeto-card {
+        height: auto;
     }
-
+    
     /* Tecnologias */
     #tecnologias {
         padding: 80px 20px;
     }
-
-    #tecnologias h2::after {
-        width: 200px;
+    
+    #tecnologias h2 {
+        margin-left: 0;
+        text-align: center;
     }
-
+    
+    #tecnologias h2::after {
+        width: 100%;
+        left: 0;
+    }
+    
+    .tech-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
     /* Rodapé */
     #rodape {
-        padding: 15px;
-        font-size: 12px;
+        padding: 20px 10px;
+    }
+    
+    /* Ajustes para imagens em detalhes de projeto */
+    .projeto-img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Ajustes para telas muito pequenas (menos de 400px) */
+@media (max-width: 400px) {
+    .tech-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .author-photo {
+        width: 150px;
+    }
+    
+    h2 {
+        font-size: 28px;
+    }
+    
+    #role {
+        font-size: 18px;
+    }
+    
+    .button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    .project-actions {
+        flex-direction: column;
     }
 }
