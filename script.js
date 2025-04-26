@@ -54,13 +54,15 @@ const setupScrollReveal = () => {
 
 // Função para carregar o conteúdo do Sobre
 async function loadSobre() {
+  const isEnglish = window.location.pathname.includes('_en');
+
   try {
-    const response = await fetch('sobre.html');
+    const response = await fetch(isEnglish ? 'sobre_en.html' : 'sobre.html');
     if (!response.ok) throw new Error('Erro ao carregar sobre.html');
-    
+
     const data = await response.text();
     document.getElementById('sobre-content').innerHTML = data;
-    setTimeout(setupScrollReveal, 100); // Atualiza efeito de scroll
+    setTimeout(setupScrollReveal, 100);
   } catch (error) {
     console.error('Erro:', error);
     document.getElementById('sobre-content').innerHTML = `
@@ -73,10 +75,12 @@ async function loadSobre() {
 // MANIPULAÇÃO DE PROJETOS
 // =============================================
 
-// Carrega e exibe os projetos
-const loadProjects = async () => {
+// Função para carregar o conteúdo dos Projetos
+async function loadProjects() {
+  const isEnglish = window.location.pathname.includes('_en');
+
   try {
-    const response = await fetch('const.json');
+    const response = await fetch(isEnglish ? 'const_en.json' : 'const.json');
     const data = await response.json();
     renderProjects(data.projetos);
   } catch (error) {
@@ -85,7 +89,7 @@ const loadProjects = async () => {
       <p class="error-message">Erro ao carregar projetos. Por favor, tente novamente mais tarde.</p>
     `;
   }
-};
+}
 
 // Renderiza os projetos na página
 const renderProjects = (projetos) => {
@@ -103,7 +107,6 @@ const renderProjects = (projetos) => {
               <span class="tech-tag">${tech}</span>
             `).join('')}
           </div>
-
         </div>
       `).join('')}
     </div>
@@ -112,7 +115,8 @@ const renderProjects = (projetos) => {
 
 // Navega para a página de detalhes do projeto
 const navigateToProject = (projectId) => {
-  window.location.href = `projeto-detalhe.html?id=${projectId}`;
+  const isEnglish = window.location.pathname.includes('_en');
+  window.location.href = isEnglish ? `projeto-detalhe_en.html?id=${projectId}` : `projeto-detalhe.html?id=${projectId}`;
 };
 
 // Carrega os detalhes de um projeto específico
@@ -121,12 +125,14 @@ const loadProjectDetails = async () => {
   const projetoId = parseInt(urlParams.get('id'));
   if (!projetoId) return;
 
+  const isEnglish = window.location.pathname.includes('_en');
+
   try {
-    const response = await fetch('const.json');
+    const response = await fetch(isEnglish ? 'const_en.json' : 'const.json');
     const data = await response.json();
     const projeto = data.projetos.find(p => p.id === projetoId);
     
-    if (projeto) renderProjectDetail(projeto);
+    if (projeto) renderProjectDetail(projeto, isEnglish);
   } catch (error) {
     console.error('Erro ao carregar detalhes:', error);
     document.getElementById('projeto-conteudo').innerHTML = `
@@ -136,14 +142,13 @@ const loadProjectDetails = async () => {
 };
 
 // Renderiza os detalhes do projeto
-const renderProjectDetail = (projeto) => {
+const renderProjectDetail = (projeto, isEnglish) => {
   const conteudo = document.getElementById('projeto-conteudo');
   if (!conteudo) return;
 
-  // Cria o botão do site se existir o link
   const siteButton = projeto.site ? `
     <a href="${projeto.site}" target="_blank" class="button live-button">
-      <i class="fas fa-external-link-alt"></i> Ver Site
+      <i class="fas fa-external-link-alt"></i> ${isEnglish ? 'View Site' : 'Ver Site'}
     </a>
   ` : '';
 
@@ -166,11 +171,11 @@ const renderProjectDetail = (projeto) => {
       
       <div class="project-actions">
         <a href="${projeto.link}" target="_blank" class="button github-button">
-          <i class="fab fa-github"></i> Ver no GitHub
+          <i class="fab fa-github"></i> ${isEnglish ? 'View on GitHub' : 'Ver no GitHub'}
         </a>
         ${siteButton}
         <button onclick="window.history.back()" class="button back-button">
-          <i class="fas fa-arrow-left"></i> Voltar
+          <i class="fas fa-arrow-left"></i> ${isEnglish ? 'Go Back' : 'Voltar'}
         </button>
       </div>
     </article>
@@ -180,11 +185,12 @@ const renderProjectDetail = (projeto) => {
 // =============================================
 // MANIPULAÇÃO DE TECNOLOGIAS
 // =============================================
-
 // Carrega e exibe as tecnologias
 const loadTecnologias = async () => {
+  const isEnglish = window.location.pathname.includes('_en');
+
   try {
-    const response = await fetch('tecnologias.json');
+    const response = await fetch(isEnglish ? 'tecnologias_en.json' : 'tecnologias.json');
     const data = await response.json();
     displayTecnologias(data.tecnologias);
   } catch (error) {
@@ -202,13 +208,14 @@ const displayTecnologias = (tecnologias) => {
 
   container.innerHTML = tecnologias.map(tech => `
     <div class="tech-item">
-      <img src="${tech.icone}" alt="${tech.nome}" class="tech-icon" 
+      <img src="${tech.icone}" alt="${tech.nome}" class="tech-icon"
            onerror="this.src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/file/file-original.svg'">
       <h3 class="tech-name">${tech.nome}</h3>
       <p class="tech-desc">${tech.descricao}</p>
     </div>
   `).join('');
 };
+
 
 // =============================================
 // MENU HAMBÚRGUER RESPONSIVO
@@ -225,29 +232,37 @@ function toggleMenu() {
 // =============================================
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Configura efeitos visuais
   setupTypingEffect();
   setupScrollReveal();
-  
-  // Animação da foto
+
   const photo = document.querySelector('.author-photo');
   if (photo) photo.classList.add('animate-comet');
-  
-  // Mudança de idioma que vou arrumar depois
+
   const languageSelect = document.getElementById('language-select');
   if (languageSelect) {
+    // Corrige valor do select baseado na página atual
+    if (window.location.pathname.includes('index_en.html')) {
+      languageSelect.value = 'en';
+    } else {
+      languageSelect.value = 'pt';
+    }
+
+    // Atualiza página ao mudar idioma
     languageSelect.addEventListener('change', function() {
-      window.location.href = this.value === 'en' ? 'index_en.html' : 'index.html';
+      if (this.value === 'en') {
+        window.location.href = 'index_en.html';
+      } else {
+        window.location.href = 'index.html';
+      }
     });
   }
-  
-  // Carrega conteúdo específico com base na página
+
+  // Carrega conteúdos específicos se existir
   if (document.getElementById('projetos-content')) loadProjects();
   if (document.getElementById('projeto-conteudo')) loadProjectDetails();
   if (document.getElementById('tecnologias-content')) loadTecnologias();
   if (document.getElementById('sobre-content')) loadSobre();
-  
-  // Efeito de fade-in para elementos
+
   const titulo = document.querySelector(".titulo-detalhe");
   if (titulo) setTimeout(() => titulo.classList.add("mostrar"), 100);
 });

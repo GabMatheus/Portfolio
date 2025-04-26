@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Home Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <!-- Header with initials and menu -->
+    <header>
+        <div class="header-container">
+          <div class="logo">
+            <img src="img/GM.png" alt="GM" class="author-logo">
+          </div>
+      
+          <!-- Hamburger button -->
+          <div class="hamburger" onclick="toggleMenu()">☰</div>
+      
+          <nav class="nav-menu" id="mobileMenu">
+            <ul>
+              <li><a href="#inicio">Home</a></li>
+              <li><a href="#sobre">About</a></li>
+              <li><a href="#projetos">Projects</a></li>
+              <li><a href="#tecnologias">Technologies</a></li>
+            </ul>
+          </nav>
+      
+          <div class="language-selector">
+            <select id="language-select">
+              <option value="pt">Português</option>
+              <option value="en">English</option>
+            </select>
+          </div>
+        </div>
+      </header>      
+
+    <!-- First section - Home -->
+    <section class="section reveal" id="inicio">
+        <div class="author-info">
+            <h2>Gabriel Matheus Oliveira</h2>
+            <p id="role">Web Developer <span id="dynamic-text"></span></p>
+            
+            <!-- Button to download CV -->
+            <a href="docs/curriculo_gabriel.pdf" class="download-btn" download>Download CV</a>
+        </div>
+        <img src="img/foto.png" alt="Gabriel Matheus" class="author-photo">
+        <div class="social-icons">
+            <a href="https://linkedin.com/in/oliveiragm" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/GabMatheus" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="mailto:gab_matheus@hotmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+        </div>
+    </section>
+
+    <!-- Second section - About -->
+    <section class="section reveal" id="sobre">
+        <h2>About Me</h2>
+        <div id="sobre-content">
+            <p>Loading information...</p>
+        </div>
+    </section>
+
+    <!-- Third section - Projects -->
+    <section class="section reveal" id="projetos">
+        <h2>My Projects</h2>
+        <div id="projetos-content">
+            <p>Loading projects...</p>
+        </div>
+    </section>
+
+    <!-- Fourth section - Technologies -->
+    <section class="section reveal" id="tecnologias">
+        <h2>Technologies</h2>
+        <div id="tecnologias-content" class="tech-grid">
+            <!-- Items will be dynamically loaded here -->
+        </div>
+    </section>
+
+    <!-- Fifth section - Footer -->
+    <footer id="rodape">
+        <p>All rights reserved © 2025 - Gabriel Matheus Oliveira</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

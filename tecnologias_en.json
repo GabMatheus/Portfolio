@@ -1,0 +1,65 @@
+{
+    "tecnologias": [
+      {
+        "nome": "C and C++",
+        "descricao": "Embedded systems development and programming",
+        "icone": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg"
+      },
+      {
+        "nome": "Python",
+        "descricao": "Automation of routines, app and game development",
+        "icone": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+      },
+      {
+        "nome": "SQL (PostgreSQL, MySQL, SQL Server)",
+        "descricao": "Relational database management",
+        "icone": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+      },
+      {
+        "nome": "HTML5",
+        "descricao": "Web page structuring",
+        "icone": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+      },
+      {
+        "nome": "CSS3",
+        "descricao": "Web page styling",
+        "icone": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+      },
+      {
+        "nome": "JavaScript",
+        "descricao": "Experience with modern JavaScript (ES6+)",
+        "icone": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+      },
+      {
+        "nome": "React",
+        "descricao": "Framework for Front End applications",
+        "icone": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+      },
+      {
+        "nome": "LaTeX",
+        "descricao": "Creation of technical documents",
+        "icone": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/latex/latex-original.svg"
+      },
+      {
+        "nome": "Microsoft Excel",
+        "descricao": "Advanced spreadsheets, macros, and data analysis",
+        "icone": "https://upload.wikimedia.org/wikipedia/commons/3/34/Microsoft_Office_Excel_%282019–present%29.svg"
+      },
+      {
+        "nome": "Java",
+        "descricao": "Object-oriented application development",
+        "icone": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
+      },
+      {
+        "nome": "Scrum",
+        "descricao": "Agile framework for managing complex projects",
+        "icone": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jira/jira-original.svg"
+      },
+      {
+        "nome": "Git/GitHub",
+        "descricao": "Version control and collaboration platform for software development",
+        "icone": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+      }
+    ]
+  }
+  
