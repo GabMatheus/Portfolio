@@ -30,7 +30,8 @@
         "descricaoResumida": "Consulta a API do Google Maps para calcular a distância entre cidades no Brasil.",
         "descricaoCompleta": "Calcula a distância entre uma cidade a outra e de uma cidade para todas do Brasil que são fornecidas pela API do Google Maps. Desenvolvido em python e conta com uma interface simples criada pelo TKinter porém responsiva.",
         "imagens": [
-          "img/dist cid.png"
+          "img/dist cid.png",
+          "img/dist cid 2.png"
         ],
         "link": "https://github.com/GabMatheus/Distancia_cidades",
         "tecnologias": ["Python", "Google Maps API"]
