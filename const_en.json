@@ -13,6 +13,18 @@
       "tecnologias": ["YOLOv8", "OpenCV", "Python", "RTSP"]
     },
     {
+      "id": 8,
+      "titulo": "Web Scraping - Currency and Cryptocurrency Prices",
+      "descricaoResumida": "Desktop application to query real-time currency and cryptocurrency prices.",
+      "descricaoCompleta": "This project is a desktop application developed to query real-time prices of currencies (such as USD, EUR, GBP) and cryptocurrencies (such as BTC and ETH). Using the PyQt5 library for the graphical interface, the application makes requests to exchange rate APIs, processes the data, and displays the updated prices in an interactive table. It also generates pie charts comparing the prices and allows data export to CSV files.",
+      "imagens": [
+        "img/busca_md.png",
+        "img/busca_md graf.png"
+      ],  
+      "link": "https://github.com/GabMatheus/web_scraping,",
+      "tecnologias": ["Python", "Requests", "PyQt5", "Matplotlib"]
+    },
+    {
       "id": 6,
       "titulo": "Product/Card Inquiry",
       "descricaoResumida": "Desktop application for querying information about products and open cards.",
