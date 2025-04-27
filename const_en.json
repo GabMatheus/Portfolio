@@ -1,90 +1,89 @@
 {
-    "projetos": [
-      {
-        "id": 1,
-        "titulo": "Barcode Generator",
-        "descricaoResumida": "Automation project to generate product barcodes. Creates a docx with all codes ready for printing.",
-        "descricaoCompleta": "This automation project was developed to generate barcodes for products. It was created to solve the problem of unreadable or hard-to-access codes for employees. The operation is simple: the user types the codes and, once finished, the program creates a docx on the desktop with all the codes ready for printing.",
-        "imagens": [
-          "img/Ger_cod_128.png",
-          "img/Ger_cod_128_doc.png"
-        ],
-        "link": "https://github.com/GabMatheus/criar_cod_barras",
-        "tecnologias": ["Python"]
-      },
-      {
-        "id": 2,
-        "titulo": "CNPJ Query",
-        "descricaoResumida": "Query CNPJs with the Brazilian Federal Revenue API and return useful data for accounting.",
-        "descricaoCompleta": "Code written in Python that queries the Brazilian Federal Revenue API to obtain company data. Since the API only allows 3 CNPJ queries per minute for free, I implemented a timer that makes the program perform 3 queries, wait the required time, and then make another three queries until the last CNPJ in the file. In the end, data such as company name, city, state, and other information is returned. The API is public and allows selecting different pieces of information as needed.",
-        "imagens": [
-          "img/Consulta_cnpj2.png",
-          "img/Consulta_cnpj.png"
-        ],
-        "link": "https://github.com/GabMatheus/consultaCNPJ",
-        "tecnologias": ["Python", "Requests", "API REST"]
-      },
-      {
-        "id": 3,
-        "titulo": "Distance Between Cities",
-        "descricaoResumida": "Query the Google Maps API to calculate the distance between cities in Brazil.",
-        "descricaoCompleta": "Calculates the distance from one city to another and from a city to all other cities in Brazil provided by the Google Maps API. Developed in Python with a simple, yet responsive, interface created with Tkinter.",
-        "imagens": [
-          "img/dist cid.png",
-          "img/dist cid 2.png"
-        ],
-        "link": "https://github.com/GabMatheus/Distancia_cidades",
-        "tecnologias": ["Python", "Google Maps API"]
-      },
-      {
-        "id": 4,
-        "titulo": "Nutritional Site",
-        "descricaoResumida": "Website with information about food, macronutrient calculator, and nutritionist contact.",
-        "descricaoCompleta": "The 'Nutritional Information' project is a website developed with the aim of promoting awareness about the importance of healthy eating and offering practical tools to help users make nutritional choices. It was developed as part of an extension project at the university.",
-        "imagens": [
-          "img/Site nutri - inicio.png",
-          "img/Site nutri - consulta.png"
-        ],
-        "link": "https://github.com/GabMatheus/Site_nutri",
-        "site": "https://gabmatheus.github.io/Site_nutri/",
-        "tecnologias": ["HTML", "CSS", "JavaScript"]
-      },
-      {
-        "id": 5,
-        "titulo": "Soldiers vs Zombies",
-        "descricaoResumida": "2D arcade game developed in Python using Pygame with scores saved in SQLite3.",
-        "descricaoCompleta": "Soldiers vs Zombies is a 2D arcade game developed with Pygame. The game features 2 phases, each ending with a time-out event. It can be played in cooperative mode (2 players). The score is saved in a SQLite3 database.",
-        "imagens": [
-          "img/SvZ - menu.png",
-          "img/SvZ - fase.png"
-        ],
-        "link": "https://github.com/GabMatheus/Soldiers_vs_zombies",
-        "tecnologias": ["Python", "Pygame", "SQLite3"]
-      },
-      {
-        "id": 6,
-        "titulo": "Product/Card Query",
-        "descricaoResumida": "Desktop application to query information about products and open credit cards.",
-        "descricaoCompleta": "This project is a desktop application that allows querying information about products and open credit cards for the company where I work. Developed using Electron for the frontend and Flask for the backend, the application accesses data stored in a PostgreSQL database. The graphical interface was built with HTML, CSS, and JavaScript.",
-        "imagens": [
-          "img/Cons_prod_inicial.png",
-          "img/Cons_prod.png"
-        ],
-        "link": "https://github.com/GabMatheus/app_flask_electron",
-        "tecnologias": ["Electron", "Flask", "PostgreSQL", "HTML/CSS/JS"]
-      },
-      {
-        "id": 7,
-        "titulo": "Truck Monitoring with YOLOv8",
-        "descricaoResumida": "Real-time camera monitoring system to detect trucks.",
-        "descricaoCompleta": "This project is a real-time camera monitoring system designed to detect trucks using the YOLOv8 model. The system connects to an RTSP camera feed and processes video frames to identify trucks in specific monitored areas. It is currently trained to detect trucks in general, with ongoing efforts to specialize in detecting tanker trucks. The application saves images and logs detections with timestamps for future analysis.",
-        "imagens": [
-          "img/detector caminhao.png",
-          "img/detector_caminhao 2.png"
-        ],
-        "link": "https://github.com/GabMatheus/monitoramento_cam",
-        "tecnologias": ["YOLOv8", "OpenCV", "Python", "RTSP"]
-      }
-    ]
-  }
-  
+  "projetos": [
+    {
+      "id": 7,
+      "titulo": "Truck Monitoring with YOLOv8",
+      "descricaoResumida": "Real-time camera monitoring system to detect trucks.",
+      "descricaoCompleta": "This project is a real-time camera monitoring system designed to detect trucks using the YOLOv8 model. The system connects to an RTSP camera feed and processes video frames to identify trucks in specific monitored areas. Currently, it is trained to detect trucks in general, with ongoing efforts to specialize in detecting tanker trucks. The application saves images and logs detections with timestamps for future analysis.",
+      "imagens": [
+        "img/detector caminhao.png",
+        "img/detector_caminhao 2.png"
+      ],
+      "link": "https://github.com/GabMatheus/monitoramento_cam",
+      "tecnologias": ["YOLOv8", "OpenCV", "Python", "RTSP"]
+    },
+    {
+      "id": 6,
+      "titulo": "Product/Card Inquiry",
+      "descricaoResumida": "Desktop application for querying information about products and open cards.",
+      "descricaoCompleta": "This project is a desktop application that allows querying information about products and open cards for the company where I work. Developed using Electron for the frontend and Flask for the backend, the application accesses data stored in a PostgreSQL database. The graphical interface was built with HTML, CSS, and JavaScript.",
+      "imagens": [
+        "img/Cons_prod_inicial.png",
+        "img/Cons_prod.png"
+      ],
+      "link": "https://github.com/GabMatheus/app_flask_electron",
+      "tecnologias": ["Electron", "Flask", "PostgreSQL", "HTML/CSS/JS"]
+    },
+    {
+      "id": 5,
+      "titulo": "Soldiers vs Zombies",
+      "descricaoResumida": "2D arcade game developed in Python using Pygame with scores saved in SQLite3.",
+      "descricaoCompleta": "Soldiers vs Zombies is a 2D arcade game developed with Pygame. The game has 2 stages, and each stage ends with an event of time running out. It can be played in cooperative mode (2 players). The score is saved in a database (SQLite3).",
+      "imagens": [
+        "img/SvZ - menu.png",
+        "img/SvZ - fase.png"
+      ],
+      "link": "https://github.com/GabMatheus/Soldiers_vs_zombies",
+      "tecnologias": ["Python", "Pygame", "SQLite3"]
+    },
+    {
+      "id": 4,
+      "titulo": "Nutrition Website",
+      "descricaoResumida": "Website with information about foods, macronutrient calculator, and nutritionist contact.",
+      "descricaoCompleta": "The 'Nutritional Food' project is a website developed with the goal of raising awareness about the importance of healthy eating and offering practical tools to help users in their nutritional choices. It was produced as part of an extension activity provided by the university.",
+      "imagens": [
+        "img/Site nutri - inicio.png",
+        "img/Site nutri - consulta.png"
+      ],
+      "link": "https://github.com/GabMatheus/Site_nutri",
+      "site": "https://gabmatheus.github.io/Site_nutri/",
+      "tecnologias": ["HTML", "CSS", "JavaScript"]
+    },
+    {
+      "id": 3,
+      "titulo": "Distance Between Cities",
+      "descricaoResumida": "Queries the Google Maps API to calculate the distance between cities in Brazil.",
+      "descricaoCompleta": "Calculates the distance between one city and another, as well as from one city to all others in Brazil provided by the Google Maps API. Developed in Python and has a simple interface created with Tkinter, but responsive.",
+      "imagens": [
+        "img/dist cid.png",
+        "img/dist cid 2.png"
+      ],
+      "link": "https://github.com/GabMatheus/Distancia_cidades",
+      "tecnologias": ["Python", "Google Maps API"]
+    },
+    {
+      "id": 2,
+      "titulo": "CNPJ Inquiry",
+      "descricaoResumida": "Queries CNPJs using the Receita Federal API and returns useful data for the accounting sector.",
+      "descricaoCompleta": "Code written in Python that performs a query to the Brazilian Receita Federal API to obtain data about companies. Since the API only allows 3 CNPJ queries per minute for free, I implemented a timer that makes the program perform 3 queries, waits for the required time, and then makes three more queries until the last CNPJ from the file. In the end, it returns data like company name, city, state, and other information. The API is public and allows selecting different data as needed.",
+      "imagens": [
+        "img/Consulta_cnpj2.png",
+        "img/Consulta_cnpj.png"
+      ],
+      "link": "https://github.com/GabMatheus/consultaCNPJ",
+      "tecnologias": ["Python", "Requests", "REST API"]
+    },
+    {
+      "id": 1,
+      "titulo": "Barcode Generator",
+      "descricaoResumida": "Automation project to generate barcodes for products. Creates a docx with all the codes for printing.",
+      "descricaoCompleta": "This automation project was developed to generate barcodes for products. It arose from the need to solve the problem of illegible or hard-to-access codes for employees. The process is simple: the user types in the codes and, once completed, the program creates a docx on the desktop with all the codes for printing.",
+      "imagens": [
+        "img/Ger_cod_128.png",
+        "img/Ger_cod_128_doc.png"
+      ],
+      "link": "https://github.com/GabMatheus/criar_cod_barras",
+      "tecnologias": ["Python"]
+    }
+  ]
+}
