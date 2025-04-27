@@ -65,14 +65,14 @@
       "id": 3,
       "titulo": "Distância entre Cidades",
       "descricaoResumida": "Consulta a API do Google Maps para calcular a distância entre cidades no Brasil.",
-      "descricaoCompleta": "Calcula a distância entre uma cidade a outra e de uma cidade para todas do Brasil que são fornecidas pela API do Google Maps. Desenvolvido em python e conta com uma interface simples criada pelo TKinter porém responsiva.",
+      "descricaoCompleta": "Este projeto é uma aplicação de desktop desenvolvida para calcular a distância entre cidades do Brasil utilizando a API do Google Maps. A aplicação foi construída com Python e PyQt5 para criar uma interface gráfica simples, mas funcional. O usuário pode inserir a cidade de origem e destino, e o sistema irá calcular e exibir a distância em tempo real. O projeto também permite calcular distâncias entre uma cidade e todas as outras cidades do Brasil, salvando os resultados em um arquivo CSV. A aplicação possui uma barra de progresso e a possibilidade de interromper o cálculo a qualquer momento.",
       "imagens": [
         "img/dist cid.png",
         "img/dist cid 2.png"
       ],
       "link": "https://github.com/GabMatheus/Distancia_cidades",
-      "tecnologias": ["Python", "Google Maps API"]
-    },
+      "tecnologias": ["Python", "Google Maps API", "PyQt5", "SQLite"]
+    },    
     {
       "id": 2,
       "titulo": "Consulta de CNPJ",

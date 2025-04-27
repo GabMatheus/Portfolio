@@ -65,13 +65,13 @@
       "id": 3,
       "titulo": "Distance Between Cities",
       "descricaoResumida": "Queries the Google Maps API to calculate the distance between cities in Brazil.",
-      "descricaoCompleta": "Calculates the distance between one city and another, as well as from one city to all others in Brazil provided by the Google Maps API. Developed in Python and has a simple interface created with Tkinter, but responsive.",
+      "descricaoCompleta": "This project is a desktop application developed to calculate the distance between cities in Brazil using the Google Maps API. The application was built with Python and PyQt5 to create a simple yet functional graphical interface. The user can enter the origin and destination cities, and the system will calculate and display the distance in real time. The project also allows calculating distances between one city and all other cities in Brazil, saving the results in a CSV file. The application has a progress bar and the ability to interrupt the calculation at any time.",
       "imagens": [
         "img/dist cid.png",
         "img/dist cid 2.png"
       ],
       "link": "https://github.com/GabMatheus/Distancia_cidades",
-      "tecnologias": ["Python", "Google Maps API"]
+      "tecnologias": ["Python", "Google Maps API", "PyQt5", "SQLite"]
     },
     {
       "id": 2,
