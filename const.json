@@ -72,6 +72,18 @@
         ],
         "link": "https://github.com/GabMatheus/app_flask_electron",
         "tecnologias": ["Electron", "Flask", "PostgreSQL", "HTML/CSS/JS"]
+      },
+      {
+        "id": 7,
+        "titulo": "Monitoramento de Caminhões com YOLOv8",
+        "descricaoResumida": "Sistema de monitoramento de câmeras em tempo real para detectar caminhões.",
+        "descricaoCompleta": "Este projeto é um sistema de monitoramento de câmeras em tempo real projetado para detectar caminhões usando o modelo YOLOv8. O sistema se conecta a um feed de câmera RTSP e processa os frames do vídeo para identificar caminhões em áreas específicas monitoradas. Atualmente, está treinado para detectar caminhões em geral, com esforços em andamento para especializar na detecção de caminhões-tanque. A aplicação salva imagens e registra as detecções com timestamps para futuras análises.",
+        "imagens": [
+          "img/detector caminhao.png",
+          "img/detector_caminhao 2.png"
+        ],
+        "link": "https://github.com/GabMatheus/monitoramento_cam",
+        "tecnologias": ["YOLOv8", "OpenCV", "Python", "RTSP"]
       }
     ]
   }

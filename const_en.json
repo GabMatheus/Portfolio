@@ -72,6 +72,18 @@
         ],
         "link": "https://github.com/GabMatheus/app_flask_electron",
         "tecnologias": ["Electron", "Flask", "PostgreSQL", "HTML/CSS/JS"]
+      },
+      {
+        "id": 7,
+        "titulo": "Truck Monitoring with YOLOv8",
+        "descricaoResumida": "Real-time camera monitoring system to detect trucks.",
+        "descricaoCompleta": "This project is a real-time camera monitoring system designed to detect trucks using the YOLOv8 model. The system connects to an RTSP camera feed and processes video frames to identify trucks in specific monitored areas. It is currently trained to detect trucks in general, with ongoing efforts to specialize in detecting tanker trucks. The application saves images and logs detections with timestamps for future analysis.",
+        "imagens": [
+          "img/detector caminhao.png",
+          "img/detector_caminhao 2.png"
+        ],
+        "link": "https://github.com/GabMatheus/monitoramento_cam",
+        "tecnologias": ["YOLOv8", "OpenCV", "Python", "RTSP"]
       }
     ]
   }
