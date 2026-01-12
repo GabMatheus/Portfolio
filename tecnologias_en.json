@@ -43,7 +43,7 @@
       {
         "nome": "Microsoft Excel",
         "descricao": "Advanced spreadsheets, macros, and data analysis",
-        "icone": "https://upload.wikimedia.org/wikipedia/commons/3/34/Microsoft_Office_Excel_%282019–present%29.svg"
+        "icone": "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/microsoftexcel.svg"
       },
       {
         "nome": "Java",
