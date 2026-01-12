@@ -1,6 +1,17 @@
 {
   "projetos": [
     {
+      "id": 9,
+      "titulo": "Publicações e Pesquisas Acadêmicas",
+      "descricaoResumida": "Artigos técnicos e acadêmicos desenvolvidos durante a graduação.",
+      "descricaoCompleta": "Este repositório é uma coleção de publicações acadêmicas desenvolvidas durante o curso de Sistemas de Informação. Os materiais foram escritos e formatados utilizando LaTeX (Overleaf) e abordam temas como modelos de qualidade de software, desenvolvimento baseado em componentes e o funcionamento e aplicações de GPUs. O repositório atua como um portfólio técnico, demonstrando habilidades em documentação, escrita estruturada e capacidade de comunicar conceitos técnicos complexos de forma clara.",
+      "imagens": [
+        "img/academic_publications.png"
+      ],
+      "link": "https://github.com/GabMatheus/Pesquisas_Latex",
+      "tecnologias": ["LaTeX", "Overleaf", "Escrita Técnica", "Documentação"]
+    },
+    {
       "id": 7,
       "titulo": "Monitoramento de Caminhões com YOLOv8",
       "descricaoResumida": "Sistema de monitoramento de câmeras em tempo real para detectar caminhões.",

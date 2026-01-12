@@ -1,6 +1,17 @@
 {
   "projetos": [
     {
+      "id": 9,
+      "titulo": "Academic Publications and Research",
+      "descricaoResumida": "Technical and academic articles developed during university coursework.",
+      "descricaoCompleta": "This project is a collection of academic and technical publications developed during the Information Systems degree program. The materials were written and formatted using LaTeX (Overleaf) and cover topics such as software quality models, component-based development, and the functioning and applications of GPUs. The repository serves as a technical portfolio, demonstrating documentation skills, structured writing, and the ability to communicate complex technical concepts clearly.",
+      "imagens": [
+        "img/academic_publications.png"
+      ],
+      "link": "https://github.com/GabMatheus/Pesquisas_Latex",
+      "tecnologias": ["LaTeX", "Overleaf", "Technical Writing", "Documentation"]
+    },
+    {
       "id": 7,
       "titulo": "Truck Monitoring with YOLOv8",
       "descricaoResumida": "Real-time camera monitoring system to detect trucks.",
