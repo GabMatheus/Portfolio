@@ -1,21 +1,34 @@
 {
   "projetos": [
     {
-      "id": 9,
-      "titulo": "Academic Publications and Research",
-      "descricaoResumida": "Technical and academic articles developed during university coursework.",
-      "descricaoCompleta": "This project is a collection of academic and technical publications developed during the Information Systems degree program. The materials were written and formatted using LaTeX (Overleaf) and cover topics such as software quality models, component-based development, and the functioning and applications of GPUs. The repository serves as a technical portfolio, demonstrating documentation skills, structured writing, and the ability to communicate complex technical concepts clearly.",
+      "id": 14,
+      "titulo": "Favorite Places Map",
+      "descricaoResumida": "Technical challenge developed for a recruitment process.",
+      "descricaoCompleta": "A web application developed as a technical challenge using React and Vite. The project features an interactive map integrated with the Leaflet API, allowing users to asynchronously search for addresses by consuming the Nominatim public API (OpenStreetMap) via React Query to optimize caching, loading states, and error handling. The application's architecture leverages a robust global state management system implemented through the Context API, which centralizes location and favorites data while sharing essential functions across components. Key developed features include dynamic map click capture with animated visual transitions, coordinate validation within the form to save custom locations, and an interactive favorites list supporting camera redirection to the selected point or record deletion.",
       "imagens": [
-        "img/academic_publications.png"
+        "img/Mapa_fav.png"
       ],
-      "link": "https://github.com/GabMatheus/Pesquisas_Latex",
-      "tecnologias": ["LaTeX", "Overleaf", "Technical Writing", "Documentation"]
+      "link": "https://github.com/GabMatheus/Mapa-de-Locais-Favoritos",
+      "tecnologias": ["React", "Vite", "TailWind CSS"]
+    },
+    {
+      "id": 10,
+      "titulo": "Raízes do Nordeste Network",
+      "descricaoResumida": "E-commerce platform featuring multi-branch management, dynamic menus, and a loyalty system.",
+      "descricaoCompleta": "Developed as the final capstone project for the Analysis and Systems Development degree. This platform simulates a fictional retail network showcasing its headquarters and regional branches. Each location features a dynamic menu providing a complete shopping experience, allowing users to manage a cart, simulate payment methods, and earn or redeem loyalty points for discounts.",
+      "imagens": [
+        "img/raizes1.png",
+        "img/raizes2.png"
+      ],
+      "link": "https://github.com/GabMatheus/Raizes_Do_Nordeste",
+      "site": "https://gabmatheus.github.io/Raizes_Do_Nordeste/",
+      "tecnologias": ["HTML", "CSS", "JavaScript"]
     },
     {
       "id": 7,
-      "titulo": "Truck Monitoring with YOLOv8",
-      "descricaoResumida": "Real-time camera monitoring system to detect trucks.",
-      "descricaoCompleta": "This project is a real-time camera monitoring system designed to detect trucks using the YOLOv8 model. The system connects to an RTSP camera feed and processes video frames to identify trucks in specific monitored areas. Currently, it is trained to detect trucks in general, with ongoing efforts to specialize in detecting tanker trucks. The application saves images and logs detections with timestamps for future analysis.",
+      "titulo": "Real-Time Truck Monitoring with YOLOv8",
+      "descricaoResumida": "Real-time camera monitoring system for truck detection using computer vision.",
+      "descricaoCompleta": "This project is a real-time camera monitoring system designed to detect trucks using the YOLOv8 model. The system connects to an RTSP camera feed and processes video frames to identify trucks within specific monitored zones. It captures images and logs detections with timestamps for analytical tracking, with ongoing work to specialize detection for fuel tankers.",
       "imagens": [
         "img/detector caminhao.png",
         "img/detector_caminhao 2.png"
@@ -25,33 +38,33 @@
     },
     {
       "id": 8,
-      "titulo": "Web Scraping - Currency and Cryptocurrency Prices",
-      "descricaoResumida": "Desktop application to query real-time currency and cryptocurrency prices.",
-      "descricaoCompleta": "This project is a desktop application developed to query real-time prices of currencies (such as USD, EUR, GBP) and cryptocurrencies (such as BTC and ETH). Using the PyQt5 library for the graphical interface, the application makes requests to exchange rate APIs, processes the data, and displays the updated prices in an interactive table. It also generates pie charts comparing the prices and allows data export to CSV files.",
+      "titulo": "Currency & Cryptocurrency Tracker",
+      "descricaoResumida": "Desktop dashboard displaying real-time financial quotes with integrated charting and exports.",
+      "descricaoCompleta": "A desktop analytical tool developed to fetch and monitor real-time foreign exchange rates (USD, EUR, GBP) and cryptocurrencies (BTC, ETH). Utilizing PyQt5, the application connects to external REST APIs, populates dynamic tracking tables, renders market distribution charts using Matplotlib, and allows historical data exports to CSV.",
       "imagens": [
         "img/busca_md.png",
         "img/busca_md graf.png"
       ],  
-      "link": "https://github.com/GabMatheus/web_scraping,",
+      "link": "https://github.com/GabMatheus/web_scraping",
       "tecnologias": ["Python", "Requests", "PyQt5", "Matplotlib"]
     },
     {
       "id": 6,
-      "titulo": "Product/Card Inquiry",
-      "descricaoResumida": "Desktop application for querying information about products and open cards.",
-      "descricaoCompleta": "This project is a desktop application that allows querying information about products and open cards for the company where I work. Developed using Electron for the frontend and Flask for the backend, the application accesses data stored in a PostgreSQL database. The graphical interface was built with HTML, CSS, and JavaScript.",
+      "titulo": "Product & Open Card Inquiry Application",
+      "descricaoResumida": "Desktop application for querying real-time company product and open card records.",
+      "descricaoCompleta": "A production-grade desktop application developed to query live information regarding products and open cards for an active enterprise. Built using Electron for the frontend and Flask for the backend, the application securely interacts with a PostgreSQL database, providing a responsive interface crafted with HTML, CSS, and JavaScript.",
       "imagens": [
         "img/Cons_prod_inicial.png",
         "img/Cons_prod.png"
       ],
       "link": "https://github.com/GabMatheus/app_flask_electron",
-      "tecnologias": ["Electron", "Flask", "PostgreSQL", "HTML/CSS/JS"]
+      "tecnologias": ["Electron", "Flask", "PostgreSQL", "HTML", "CSS", "JavaScript"]
     },
     {
       "id": 5,
-      "titulo": "Soldiers vs Zombies",
-      "descricaoResumida": "2D arcade game developed in Python using Pygame with scores saved in SQLite3.",
-      "descricaoCompleta": "Soldiers vs Zombies is a 2D arcade game developed with Pygame. The game has 2 stages, and each stage ends with an event of time running out. It can be played in cooperative mode (2 players). The score is saved in a database (SQLite3).",
+      "titulo": "Soldiers vs Zombies Arcade Game",
+      "descricaoResumida": "2D cooperative arcade game built in Python with local database high-score integration.",
+      "descricaoCompleta": "A retro 2D arcade shooter built from scratch using the Pygame framework. The game features timed level transitions, dynamic asset rendering, full local 2-player cooperative multiplayer support, and integrates an SQLite3 database backend to persist player high-scores and sessions.",
       "imagens": [
         "img/SvZ - menu.png",
         "img/SvZ - fase.png"
@@ -61,9 +74,9 @@
     },
     {
       "id": 4,
-      "titulo": "Nutrition Website",
-      "descricaoResumida": "Website with information about foods, macronutrient calculator, and nutritionist contact.",
-      "descricaoCompleta": "The 'Nutritional Food' project is a website developed with the goal of raising awareness about the importance of healthy eating and offering practical tools to help users in their nutritional choices. It was produced as part of an extension activity provided by the university.",
+      "titulo": "Nutritional Awareness Platform",
+      "descricaoResumida": "Web application featuring dynamic health calculators developed as a university extension project.",
+      "descricaoCompleta": "A public-facing health platform created as part of a university academic extension initiative. The application aims to foster healthy eating habits by providing interactive tools, comprehensive food database tracking resources, dynamic wellness calculators, and direct communication conduits to licensed nutritionists.",
       "imagens": [
         "img/Site nutri - inicio.png",
         "img/Site nutri - consulta.png"
@@ -74,39 +87,83 @@
     },
     {
       "id": 3,
-      "titulo": "Distance Between Cities",
-      "descricaoResumida": "Queries the Google Maps API to calculate the distance between cities in Brazil.",
-      "descricaoCompleta": "This project is a desktop application developed to calculate the distance between cities in Brazil using the Google Maps API. The application was built with Python and PyQt5 to create a simple yet functional graphical interface. The user can enter the origin and destination cities, and the system will calculate and display the distance in real time. The project also allows calculating distances between one city and all other cities in Brazil, saving the results in a CSV file. The application has a progress bar and the ability to interrupt the calculation at any time.",
+      "titulo": "Intercity Distance Calculator",
+      "descricaoResumida": "Desktop application integrating the Google Maps API to calculate distances between Brazilian cities.",
+      "descricaoCompleta": "A functional desktop application built with Python and PyQt5 to calculate distances between cities across Brazil utilizing the Google Maps Distance Matrix API. It features multi-city processing capabilities, real-time calculation progress bars, thread interruption handling, and exports complete route datasets directly into CSV and SQLite structures.",
       "imagens": [
         "img/dist cid.png",
         "img/dist cid 2.png"
       ],
       "link": "https://github.com/GabMatheus/Distancia_cidades",
       "tecnologias": ["Python", "Google Maps API", "PyQt5", "SQLite"]
+    },    
+    {
+      "id": 9,
+      "titulo": "Academic Publications & Technical Writing",
+      "descricaoResumida": "Collection of peer-reviewed technical articles and academic documentation engineered in LaTeX.",
+      "descricaoCompleta": "A curated repository gathering technical research papers written during undergraduate studies. Documented using LaTeX and Overleaf, the papers cover software quality models, component-based engineering, and GPU architectures. This acts as a documentation portfolio demonstrating advanced skills in structured writing and technical communication.",
+      "imagens": [
+        "img/academic_publications.png"
+      ],
+      "link": "https://github.com/GabMatheus/Pesquisas_Latex",
+      "tecnologias": ["LaTeX", "Overleaf", "Technical Writing", "Documentation"]
     },
     {
       "id": 2,
-      "titulo": "CNPJ Inquiry",
-      "descricaoResumida": "Queries CNPJs using the Receita Federal API and returns useful data for the accounting sector.",
-      "descricaoCompleta": "Code written in Python that performs a query to the Brazilian Receita Federal API to obtain data about companies. Since the API only allows 3 CNPJ queries per minute for free, I implemented a timer that makes the program perform 3 queries, waits for the required time, and then makes three more queries until the last CNPJ from the file. In the end, it returns data like company name, city, state, and other information. The API is public and allows selecting different data as needed.",
+      "titulo": "Automated CNPJ Batch Inquirer",
+      "descricaoResumida": "Automation tool for batch-querying corporate data via the Brazilian Federal Revenue API.",
+      "descricaoCompleta": "A Python backend utility optimized to automate bulk data extraction from the Brazilian Federal Revenue public REST API. To respect free-tier rate limits (3 requests/min), the script implements an automated throttling timer, seamlessly iterating through large dataset files to output structured corporate information (company names, cities, states) for accounting workflows.",
       "imagens": [
         "img/Consulta_cnpj2.png",
         "img/Consulta_cnpj.png"
       ],
       "link": "https://github.com/GabMatheus/consultaCNPJ",
-      "tecnologias": ["Python", "Requests", "REST API"]
+      "tecnologias": ["Python", "Requests", "API REST"]
     },
     {
       "id": 1,
-      "titulo": "Barcode Generator",
-      "descricaoResumida": "Automation project to generate barcodes for products. Creates a docx with all the codes for printing.",
-      "descricaoCompleta": "This automation project was developed to generate barcodes for products. It arose from the need to solve the problem of illegible or hard-to-access codes for employees. The process is simple: the user types in the codes and, once completed, the program creates a docx on the desktop with all the codes for printing.",
+      "titulo": "Automated Barcode Generator",
+      "descricaoResumida": "Workflow automation utility that generates high-resolution barcodes bundled into printable documents.",
+      "descricaoCompleta": "An internal automation script designed to eliminate manual data entry and warehouse operational bottlenecks caused by corrupted or unreachable inventory tags. The Python program processes bulk numeric inputs, generates standard Code 128 barcodes, and automatically formats them into a clean desktop-ready DOCX file optimized for direct office printing.",
       "imagens": [
         "img/Ger_cod_128.png",
         "img/Ger_cod_128_doc.png"
       ],
       "link": "https://github.com/GabMatheus/criar_cod_barras",
       "tecnologias": ["Python"]
+    },
+    {
+      "id": 13,
+      "titulo": "Password Generator",
+      "descricaoResumida": "Password generator and sign-up screen.",
+      "descricaoCompleta": "Project developed to simulate a registration page that provides users with the option to generate a secure and random password.",
+      "imagens": [
+        "img/Ger_password.png"
+      ],
+      "link": "https://github.com/GabMatheus/gerador_password",
+      "tecnologias": ["HTML", "CSS", "JavaScript"]
+    },
+    {
+      "id": 12,
+      "titulo": "QR Code Generator",
+      "descricaoResumida": "QR Code generator built with HTML, CSS, and JS.",
+      "descricaoCompleta": "A webpage created during Udemy's Full Front-End course, designed to generate QR codes from entered text or URLs by consuming a QR code generation API.",
+      "imagens": [
+        "img/qr-code.png"
+      ],
+      "link": "https://github.com/GabMatheus/Gerador_qr_code",
+      "tecnologias": ["HTML", "CSS", "JavaScript", "APIs"]
+    },
+    {
+      "id": 11,
+      "titulo": "Instagram Home Page Clone",
+      "descricaoResumida": "A clone of the Instagram home page.",
+      "descricaoCompleta": "Project developed during Udemy's Full Front-End course to create a clone of the Instagram home page.",
+      "imagens": [
+        "img/insta.png"
+      ],
+      "link": "https://github.com/GabMatheus/clone_instagram_home_page",
+      "tecnologias": ["HTML", "CSS"]
     }
   ]
 }

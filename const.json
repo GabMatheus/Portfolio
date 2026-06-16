@@ -1,15 +1,28 @@
 {
   "projetos": [
     {
-      "id": 9,
-      "titulo": "Publicações e Pesquisas Acadêmicas",
-      "descricaoResumida": "Artigos técnicos e acadêmicos desenvolvidos durante a graduação.",
-      "descricaoCompleta": "Este repositório é uma coleção de publicações acadêmicas desenvolvidas durante o curso de Sistemas de Informação. Os materiais foram escritos e formatados utilizando LaTeX (Overleaf) e abordam temas como modelos de qualidade de software, desenvolvimento baseado em componentes e o funcionamento e aplicações de GPUs. O repositório atua como um portfólio técnico, demonstrando habilidades em documentação, escrita estruturada e capacidade de comunicar conceitos técnicos complexos de forma clara.",
+      "id": 14,
+      "titulo": "Mapa de Locais Favoritos",
+      "descricaoResumida": "Desafio técnico feito para processo seletivo.",
+      "descricaoCompleta": "Aplicação desenvolvida como um desafio técnico utilizando React e Vite. O projeto consiste em um mapa interativo integrado com a API Leaflet, permitindo ao usuário buscar endereços de forma assíncrona consumindo a API pública Nominatim (OpenStreetMap) através do React Query para otimizar cache, estados de carregamento e erros. A arquitetura da aplicação conta com uma gerência de estado global robusta implementada via Context API, que centraliza dados de localização e favoritos compartilhando funções essenciais entre os componentes. Entre as funcionalidades desenvolvidas, destacam-se a captura dinâmica de cliques no mapa com transições visuais animadas, validação de coordenadas no formulário para salvar locais customizados e uma lista interativa de favoritos com suporte para redirecionamento de câmera ao ponto selecionado ou exclusão de registros.",
       "imagens": [
-        "img/academic_publications.png"
+        "img/Mapa_fav.png"
       ],
-      "link": "https://github.com/GabMatheus/Pesquisas_Latex",
-      "tecnologias": ["LaTeX", "Overleaf", "Escrita Técnica", "Documentação"]
+      "link": "https://github.com/GabMatheus/Mapa-de-Locais-Favoritos",
+      "tecnologias": ["React", "Vite", "TailWind CSS"]
+    },
+    {
+      "id": 10,
+      "titulo": "Rede Raízes do Nordeste",
+      "descricaoResumida": "Site com informações sobre filiais, alimentos, pagamentos e carrinho.",
+      "descricaoCompleta": "O projeto 'Raízes do Nordeste' é um site desenvolvido como projeto final do curso de Análise e Desenvolvimento de Sistemas, nele temos uma página da rede fictícia com sua matriz e filiais onde em cada uma apresenta-se um cardápio dinâmico podendo o cliente ter uma experiência de compras completa, adicionando ao carrinho, simulando escolha de forma de pagamentos e acumulando ou resgatando pontos para ganhar descontos.",
+      "imagens": [
+        "img/raizes1.png",
+        "img/raizes2.png"
+      ],
+      "link": "https://github.com/GabMatheus/Raizes_Do_Nordeste",
+      "site": "https://gabmatheus.github.io/Raizes_Do_Nordeste/",
+      "tecnologias": ["HTML", "CSS", "JavaScript"]
     },
     {
       "id": 7,
@@ -62,7 +75,7 @@
     {
       "id": 4,
       "titulo": "Site Nutricional",
-      "descricaoResumida": "Site com informações sobre alimentos, calculadora de macronutrientes e contato de nutricionista.",
+      "descricaoResumida": "Site com informações sobre alimentos, calculadoras dinamicas e contato de nutricionista.",
       "descricaoCompleta": "O projeto 'Nutrição Alimentar' é um site desenvolvido com o objetivo de promover a conscientização sobre a importância da alimentação saudável e oferecer ferramentas práticas para auxiliar os usuários em suas escolhas nutricionais. Ele foi produzido a partir de um projeto de atividade extensionista que a faculdade proporcionou.",
       "imagens": [
         "img/Site nutri - inicio.png",
@@ -84,6 +97,17 @@
       "link": "https://github.com/GabMatheus/Distancia_cidades",
       "tecnologias": ["Python", "Google Maps API", "PyQt5", "SQLite"]
     },    
+    {
+      "id": 9,
+      "titulo": "Publicações e Pesquisas Acadêmicas",
+      "descricaoResumida": "Artigos técnicos e acadêmicos desenvolvidos durante a graduação.",
+      "descricaoCompleta": "Este repositório é uma coleção de publicações acadêmicas desenvolvidas durante o curso de Sistemas de Informação. Os materiais foram escritos e formatados utilizando LaTeX (Overleaf) e abordam temas como modelos de qualidade de software, desenvolvimento baseado em componentes e o funcionamento e aplicações de GPUs. O repositório atua como um portfólio técnico, demonstrando habilidades em documentação, escrita estruturada e capacidade de comunicar conceitos técnicos complexos de forma clara.",
+      "imagens": [
+        "img/academic_publications.png"
+      ],
+      "link": "https://github.com/GabMatheus/Pesquisas_Latex",
+      "tecnologias": ["LaTeX", "Overleaf", "Escrita Técnica", "Documentação"]
+    },
     {
       "id": 2,
       "titulo": "Consulta de CNPJ",
@@ -107,6 +131,39 @@
       ],
       "link": "https://github.com/GabMatheus/criar_cod_barras",
       "tecnologias": ["Python"]
+    },
+    {
+      "id": 13,
+      "titulo": "Gerador de Password",
+      "descricaoResumida": "Gerador de Password e tela de cadastro.",
+      "descricaoCompleta": "Projeto criado para simular uma página de cadastro onde nele se fornece a opção de gerar uma senha segura e aleatória para o usuário.",
+      "imagens": [
+        "img/Ger_password.png"
+      ],
+      "link": "https://github.com/GabMatheus/gerador_password",
+      "tecnologias": ["HTML", "CSS", "JavaScript"]
+    },
+      {
+      "id": 12,
+      "titulo": "Gerador de Qr-Code",
+      "descricaoResumida": "Gerador de Qr-Code em html, css e Js.",
+      "descricaoCompleta": "Página criada no curso de Front-End Completo da Udemy, com objetivo de criar uma página geradora de Qr-Code a partir de um texto ou site inseridos e consumindo a Api geradora do código.",
+      "imagens": [
+        "img/qr-code.png"
+      ],
+      "link": "https://github.com/GabMatheus/Gerador_qr_code",
+      "tecnologias": ["HTML", "CSS", "JavaScript", "APIs"]
+    },
+    {
+      "id": 11,
+      "titulo": "Clone Home Page Instagram",
+      "descricaoResumida": "Clone da página inicial do instagram.",
+      "descricaoCompleta": "Projeto feito no curso da Udemy de front-end completo para criar um clone da página inicial do Instagram.",
+      "imagens": [
+        "img/insta.png"
+      ],
+      "link": "https://github.com/GabMatheus/clone_instagram_home_page",
+      "tecnologias": ["HTML", "CSS"]
     }
   ]
 }
